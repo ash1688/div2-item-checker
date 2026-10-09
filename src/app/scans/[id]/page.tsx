@@ -20,8 +20,21 @@ export default async function ScanPage({ params }: { params: Promise<{ id: strin
   const ownsExotic =
     scan.item?.rarity === "exotic" && getProfile().exoticsOwned.includes(scan.item.name);
 
+  const unsure = scan.item && [...scan.item.core, ...scan.item.attributes].some((a) => a.uncertain);
+
   return (
     <div className="flex flex-col gap-6">
+      {scan.error && (
+        <p className="card border-expertise text-sm">
+          Couldn&apos;t read this screenshot automatically ({scan.error}) Fill in the form below.
+        </p>
+      )}
+      {unsure && (
+        <p className="card border-expertise text-sm">
+          Some values weren&apos;t read clearly. They&apos;re highlighted in yellow below: check them against the
+          screenshot, then press <strong>Get verdict</strong>. The verdict shown is provisional until then.
+        </p>
+      )}
       {v && (
         <section className="card flex flex-col gap-3">
           <div className="flex items-center gap-3">

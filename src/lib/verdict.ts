@@ -20,6 +20,8 @@ const PERFECT_TOLERANCE = 1.02;
 export interface ItemAttribute {
   name: string;
   value: number;
+  /** Set by OCR when the reading was ambiguous; the review form highlights it. */
+  uncertain?: boolean;
 }
 
 export interface ScannedItem {

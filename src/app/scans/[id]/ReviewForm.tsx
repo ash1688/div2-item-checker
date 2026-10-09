@@ -1,7 +1,7 @@
 "use client";
 import { useState, useTransition } from "react";
 import { GEAR_SLOTS, WEAPON_CLASSES } from "@/lib/game";
-import type { ScannedItem } from "@/lib/verdict";
+import type { ItemAttribute, ScannedItem } from "@/lib/verdict";
 import { judgeScan } from "./actions";
 
 interface Names {
@@ -15,6 +15,8 @@ interface Names {
 interface Row {
   name: string;
   value: string;
+  /** OCR wasn't sure about this value; cleared once the user edits it. */
+  uncertain?: boolean;
 }
 
 const WEAPON_RARITIES = [
@@ -29,8 +31,12 @@ const GEAR_RARITIES = [
   ["exotic", "Exotic"],
 ] as const;
 
-const toRows = (attrs: { name: string; value: number }[] | undefined, count: number): Row[] => {
-  const rows = (attrs ?? []).map((a) => ({ name: a.name, value: String(a.value) }));
+const toRows = (attrs: ItemAttribute[] | undefined, count: number): Row[] => {
+  const rows: Row[] = (attrs ?? []).map((a) => ({
+    name: a.name,
+    value: a.uncertain && !a.value ? "" : String(a.value),
+    uncertain: a.uncertain,
+  }));
   while (rows.length < count) rows.push({ name: "", value: "" });
   return rows;
 };
@@ -93,11 +99,12 @@ export function ReviewForm({
     rows.map((r, i) => (
       <div key={i} className="flex gap-2">
         <input
-          className="w-24 shrink-0"
+          className={`w-24 shrink-0 ${r.uncertain ? "!border-expertise !bg-expertise/15" : ""}`}
+          title={r.uncertain ? "Not sure this was read correctly: please check it" : undefined}
           inputMode="decimal"
           placeholder="Value"
           value={r.value}
-          onChange={(e) => set(rows.map((x, j) => (j === i ? { ...x, value: e.target.value } : x)))}
+          onChange={(e) => set(rows.map((x, j) => (j === i ? { ...x, value: e.target.value, uncertain: false } : x)))}
         />
         <input
           className="flex-1"

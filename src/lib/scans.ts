@@ -1,11 +1,15 @@
 import "server-only";
 import { desc, eq } from "drizzle-orm";
 import { randomUUID } from "node:crypto";
+import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import sharp from "sharp";
-import { UPLOAD_DIR, db } from "@/db";
+import { db } from "@/db";
+import { UPLOAD_DIR } from "@/lib/paths";
 import { scans } from "@/db/schema";
-import type { ScannedItem, Verdict } from "@/lib/verdict";
+import { readItemScreenshot } from "@/lib/ocr/ocr";
+import { getProfile } from "@/lib/profile";
+import { judge, type ScannedItem, type Verdict } from "@/lib/verdict";
 
 export interface Scan {
   id: number;
@@ -26,14 +30,27 @@ function toScan(row: typeof scans.$inferSelect): Scan {
   };
 }
 
-/** Store an uploaded screenshot as an upright JPEG and create a scan for it. */
+/**
+ * Store an uploaded screenshot and create a scan for it. Upright JPEG/PNG files
+ * (console captures) are kept byte-for-byte: re-encoding shifts pixels enough to
+ * hurt OCR. Anything else is converted to an upright JPEG.
+ */
 export async function createScan(file: File): Promise<number> {
-  const name = `${randomUUID()}.jpg`;
-  await sharp(Buffer.from(await file.arrayBuffer()))
-    .rotate() // honour EXIF orientation from phone cameras
-    .resize({ width: 3000, height: 3000, fit: "inside", withoutEnlargement: true })
-    .jpeg({ quality: 92 })
-    .toFile(join(UPLOAD_DIR, name));
+  const input = Buffer.from(await file.arrayBuffer());
+  const meta = await sharp(input).metadata();
+  const upright = !meta.orientation || meta.orientation === 1;
+  let name: string;
+  if (upright && (meta.format === "jpeg" || meta.format === "png")) {
+    name = `${randomUUID()}.${meta.format === "png" ? "png" : "jpg"}`;
+    await writeFile(join(UPLOAD_DIR, name), input);
+  } else {
+    name = `${randomUUID()}.jpg`;
+    await sharp(input)
+      .rotate() // honour EXIF orientation from phone cameras
+      .resize({ width: 3840, height: 3840, fit: "inside", withoutEnlargement: true })
+      .jpeg({ quality: 95 })
+      .toFile(join(UPLOAD_DIR, name));
+  }
   const row = db
     .insert(scans)
     .values({ createdAt: new Date(), imagePath: name, status: "needs-review" })
@@ -56,6 +73,34 @@ export function saveJudgement(id: number, item: ScannedItem, verdict: Verdict) {
     .set({ item: JSON.stringify(item), verdict: JSON.stringify(verdict), status: "done" })
     .where(eq(scans.id, id))
     .run();
+}
+
+/**
+ * Read the screenshot and judge it. Clear readings are marked done; anything
+ * the OCR wasn't sure about is left for the user to check in the review form.
+ */
+export async function analyseScan(id: number) {
+  const scan = getScan(id);
+  if (!scan) return;
+  try {
+    const { item, text } = await readItemScreenshot(await readFile(join(UPLOAD_DIR, scan.imagePath)));
+    const unsure = [...item.core, ...item.attributes].some((a) => a.uncertain) || !item.name;
+    db.update(scans)
+      .set({
+        ocrText: JSON.stringify(text),
+        item: JSON.stringify(item),
+        verdict: JSON.stringify(judge(item, getProfile())),
+        status: unsure ? "needs-review" : "done",
+        error: null,
+      })
+      .where(eq(scans.id, id))
+      .run();
+  } catch (e) {
+    db.update(scans)
+      .set({ status: "needs-review", error: e instanceof Error ? e.message : String(e) })
+      .where(eq(scans.id, id))
+      .run();
+  }
 }
 
 export function deleteScan(id: number) {

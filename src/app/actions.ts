@@ -1,6 +1,6 @@
 "use server";
 import { redirect } from "next/navigation";
-import { createScan } from "@/lib/scans";
+import { analyseScan, createScan } from "@/lib/scans";
 
 export async function uploadScreenshots(_prev: string | null, form: FormData): Promise<string | null> {
   const files = form.getAll("images").filter((f): f is File => f instanceof File && f.size > 0);
@@ -13,5 +13,7 @@ export async function uploadScreenshots(_prev: string | null, form: FormData): P
       return `Couldn't read ${file.name}. Use a JPEG or PNG screenshot.`;
     }
   }
+  // Read each screenshot now; a few seconds per image.
+  for (const id of ids) await analyseScan(id);
   redirect(ids.length === 1 ? `/scans/${ids[0]}` : "/scans");
 }

@@ -24,11 +24,8 @@ export default function HistoryPage() {
                     .join(" · ")}
                 </div>
               </div>
-              {s.verdict ? (
-                <VerdictBadge action={s.verdict.action} />
-              ) : (
-                <span className="text-xs text-expertise">Review</span>
-              )}
+              {s.status === "needs-review" && <span className="text-xs text-expertise">Check</span>}
+              {s.verdict && <VerdictBadge action={s.verdict.action} />}
             </Link>
           </li>
         ))}
