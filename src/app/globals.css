@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0f1114;
+  --color-panel: #181b20;
+  --color-panel-2: #20242b;
+  --color-line: #2c313a;
+  --color-ink: #e8eaed;
+  --color-muted: #9aa1ac;
+  --color-shd: #f26b1d;
+  --color-keep: #3ecf8e;
+  --color-library: #4ea1ff;
+  --color-expertise: #f5c542;
+  --color-deconstruct: #ef5350;
+  --color-exotic: #e0533c;
+  --color-named: #e8b23a;
+  --color-gearset: #2bb3a3;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+input, select, textarea {
+  background: var(--color-panel-2);
+  border: 1px solid var(--color-line);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.625rem;
+  color: var(--color-ink);
+  min-width: 0;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--color-shd);
+  outline-offset: -1px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  background: var(--color-shd);
+  color: #111;
+}
+.btn:disabled { opacity: 0.5; }
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+}
+.card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
