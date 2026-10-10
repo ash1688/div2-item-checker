@@ -61,4 +61,4 @@ User agreed: Lexington (named AR, 100/100/100) = Keep, Vile (exotic mask, 96/96)
 - Item Grade (Expertise upgrades) doesn't change rolled attributes, so comparisons ignore it.
 
 ## Pending
-- Re-run `npm test` locally against the 7 original captures in `samples/ps5/` (not in the repo) to confirm the Tinkering-screen changes didn't affect them. Copy the 3 new captures there too: `socom-mk16.jpg`, `vile.jpg`, `fafnir.jpg`.
+- Nothing outstanding for OCR. Sample captures live in `samples/ps5/` (git-ignored); the test suite reads all 10.
