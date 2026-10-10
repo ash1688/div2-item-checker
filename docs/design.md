@@ -22,7 +22,8 @@ Upload screenshots of Division 2 items (taken on PS5, synced to phone via the Pl
   9. Values without a clear, complete majority (non-zero, read with its decimal point at least once) get 16 more readings from local-contrast masks and the brightest colour channel as greyscale. Pale orange values at small sizes need these.
   10. Gear core: the yellow Skill Tier battery icon in the header means Skill Tier +1.0 (the only value it rolls), so that row isn't read at all.
 - Accuracy on the 7 PS5 sample captures (each also tested after a JPEG re-save): all names, brands, rarities and talents right; 15/16 values right, and the one misread is flagged.
-- Tinkering-screen captures (SOCOM Mk16, Vile, Fafnir; 2000x1125 re-encodes, each also re-saved): all names, rarities and non-exotic talents right; every value right or flagged. "Mk16" reads as "MK16". Exotic talents aren't in the talent list, so they come through as read ("Tox Delivery"); the verdict ignores them.
+- Tinkering-screen captures (SOCOM Mk16, Vile, Fafnir; full 4K, each also re-saved): all names, rarities and non-exotic talents right; every value right or flagged. SOCOM and Vile have nothing flagged. On the Fafnir the greyed-out exotic core values are always flagged and Damage to Armor can't be read (the user types it in). Exotic talents aren't in the talent list, so they come through as read ("Toxic Delivery Rp"); the verdict ignores them.
+- Name and stat clean-up: misread digits in model numbers are restored ("Mk1e" -> "Mk16"); a garbled weapon core name is replaced with the only stat that slot can hold for the class; unrecognised minor rows under 6 letters are dropped as junk.
 - Uploads that are already upright JPEG/PNG are stored byte-for-byte: re-encoding shifts pixels enough to hurt OCR.
 - Fallback if OCR proves unreliable: Anthropic API or an MCP (decide with the user first).
 
