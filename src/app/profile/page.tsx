@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { LIBRARY_SCOPES, SCOPE_TITLE, scopeProgress } from "@/lib/library";
 import { getExpertiseLevel, getKeptItems, getProfile } from "@/lib/profile";
 import { rollQuality } from "@/lib/verdict";
 import {
@@ -10,25 +9,9 @@ import {
   saveExpertise,
   saveProficiency,
 } from "./actions";
-import { MaxScopeButton } from "./MaxScopeButton";
+import { LibraryOverview } from "./LibraryOverview";
 
 export const dynamic = "force-dynamic";
-
-function Progress({ label, done, total }: { label: string; done: number; total: number }) {
-  return (
-    <div className="text-sm">
-      <div className="flex justify-between text-muted">
-        <span>{label}</span>
-        <span className="tabular-nums">
-          {done}/{total}
-        </span>
-      </div>
-      <div className="mt-1 h-1.5 rounded bg-panel-2">
-        <div className="h-1.5 rounded bg-keep" style={{ width: `${total ? (done / total) * 100 : 0}%` }} />
-      </div>
-    </div>
-  );
-}
 
 function Section({ title, hint, children, open }: { title: string; hint?: string; children: React.ReactNode; open?: boolean }) {
   return (
@@ -50,27 +33,7 @@ export default function ProfilePage() {
     <div className="flex flex-col gap-4">
       <h1 className="text-xl font-semibold">Profile</h1>
 
-      <section className="grid gap-3 sm:grid-cols-2" aria-label="Recalibration library">
-        {LIBRARY_SCOPES.map((scope) => {
-          const p = scopeProgress(scope, profile);
-          const all = p.attributesMaxed === p.attributesTotal && p.talentsUnlocked === p.talentsTotal;
-          return (
-            <div key={scope} className="card flex flex-col gap-3">
-              <Link href={`/profile/library/${scope}`} className="group flex flex-col gap-2">
-                <div className="flex items-center">
-                  <h2 className="font-semibold">{SCOPE_TITLE[scope]} library</h2>
-                  <span className="ml-auto text-muted group-hover:text-ink" aria-hidden>→</span>
-                </div>
-                <Progress label="Attributes maxed" done={p.attributesMaxed} total={p.attributesTotal} />
-                <Progress label="Talents unlocked" done={p.talentsUnlocked} total={p.talentsTotal} />
-              </Link>
-              <div className="self-start">
-                <MaxScopeButton scope={scope} title={SCOPE_TITLE[scope]} disabled={all} />
-              </div>
-            </div>
-          );
-        })}
-      </section>
+      <LibraryOverview profile={profile} />
 
       <Section title={`Expertise level: ${level}`} open>
         <form action={saveExpertise} className="flex gap-2">

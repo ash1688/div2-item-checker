@@ -7,10 +7,9 @@ import {
   type WeaponClass,
   findAttribute,
   findTalent,
-  libraryKey,
-  libraryScope,
   normalizeName,
 } from "@/lib/game";
+import { entryKey, groupForItem, libraryCategory, type LibraryGroup } from "@/lib/library";
 
 export const GOD_ROLL_THRESHOLD = 0.95;
 export const MAX_PROFICIENCY_RANK = 10;
@@ -41,9 +40,9 @@ export interface ScannedItem {
 }
 
 export interface Profile {
-  /** libraryKey(scope, name) -> best value extracted so far. */
+  /** entryKey(group, attribute) -> best value extracted so far, per weapon class / gear slot. */
   libraryAttributes: Record<string, number>;
-  /** Talent names unlocked in the library. */
+  /** entryKey(group, talent) for each talent unlocked, per weapon class / gear slot. */
   libraryTalents: string[];
   /** Proficiency type (weapon model, brand, gear set, named, exotic) -> rank 0-10. */
   proficiency: Record<string, number>;
@@ -147,8 +146,8 @@ function lookupRank(profile: Profile, type: string): number | undefined {
   return undefined;
 }
 
-function hasTalent(profile: Profile, talent: TalentDef): boolean {
-  return profile.libraryTalents.some((t) => normalizeName(t) === normalizeName(talent.name));
+function hasTalent(profile: Profile, group: LibraryGroup | undefined, talent: TalentDef): boolean {
+  return group !== undefined && profile.libraryTalents.includes(entryKey(group, talent.name));
 }
 
 function ownsExotic(profile: Profile, name: string): boolean {
@@ -198,17 +197,25 @@ export function judge(item: ScannedItem, profile: Profile): Verdict {
   }
 
   // Library gains (exotics can't be extracted, so they skip this entirely).
+  // The library is per weapon class / gear slot, so the item's own one is compared.
+  const group = groupForItem(item);
   const libraryGains: LibraryGain[] = [];
-  if (!isExotic) {
+  if (!isExotic && !group) {
+    warnings.push(
+      item.kind === "weapon"
+        ? "Weapon class unknown, so the library couldn't be checked; pick it in the form."
+        : "Gear slot unknown, so the library couldn't be checked; pick it in the form.",
+    );
+  }
+  if (!isExotic && group) {
     for (const r of resolved) {
-      const scope = r.def && libraryScope(r.def.category);
-      if (!r.def || !scope || r.perfect) continue;
-      const current = profile.libraryAttributes[libraryKey(scope, r.def.name)] ?? 0;
+      if (!r.def || !libraryCategory(r.def.category, item.kind) || r.perfect) continue;
+      const current = profile.libraryAttributes[entryKey(group, r.def.name)] ?? 0;
       if (r.value > current) {
         libraryGains.push({ kind: "attribute", name: r.def.name, value: r.value, current });
       }
     }
-    if (talentDef && !hasTalent(profile, talentDef)) {
+    if (talentDef && !hasTalent(profile, group, talentDef)) {
       libraryGains.push({ kind: "talent", name: talentDef.name });
     }
   }
@@ -284,7 +291,7 @@ export function judge(item: ScannedItem, profile: Profile): Verdict {
     };
   }
 
-  if (!kept && talentDef && (talentDef.tier === "S" || talentDef.tier === "A") && !hasTalent(profile, talentDef)) {
+  if (!kept && talentDef && (talentDef.tier === "S" || talentDef.tier === "A") && group && !hasTalent(profile, group, talentDef)) {
     return {
       ...base,
       action: "keep",

@@ -126,21 +126,3 @@ export function weaponClassFromCore(coreName: string): WeaponClass | undefined {
   return def?.appliesTo[0] as WeaponClass | undefined;
 }
 
-/** Library scope an attribute is stored under, or null if it can't be extracted. */
-export function libraryScope(category: AttributeCategory): "gear" | "weapon" | null {
-  if (category === "gear-core" || category === "gear-minor") return "gear";
-  if (category === "weapon-minor") return "weapon";
-  return null;
-}
-
-export function libraryKey(scope: "gear" | "weapon", name: string): string {
-  return `${scope}:${name}`;
-}
-
-/** Every attribute the recalibration library tracks, for the profile form. */
-export function libraryAttributes(): { key: string; scope: "gear" | "weapon"; def: AttributeDef }[] {
-  return ATTRIBUTES.flatMap((def) => {
-    const scope = libraryScope(def.category);
-    return scope ? [{ key: libraryKey(scope, def.name), scope, def }] : [];
-  });
-}

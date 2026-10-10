@@ -11,7 +11,7 @@ const emptyProfile: Profile = {
 /** A profile where everything is already maxed, so nothing beats it. */
 const maxedProfile = (types: string[]): Profile => ({
   libraryAttributes: new Proxy({}, { get: () => 999999 }) as Record<string, number>,
-  libraryTalents: ["Ranger"],
+  libraryTalents: ["weapon:Assault Rifle:Ranger"],
   proficiency: Object.fromEntries(types.map((t) => [t, 10])),
   exoticsOwned: ["Fafnir", "Vile"],
 });
@@ -126,7 +126,7 @@ describe("judge: talent rule", () => {
   });
 
   it("drops to library once the talent is unlocked", () => {
-    const v = judge(samples.socom, { ...emptyProfile, libraryTalents: ["Ranger"] });
+    const v = judge(samples.socom, { ...emptyProfile, libraryTalents: ["weapon:Assault Rifle:Ranger"] });
     expect(v.action).toBe("library");
   });
 
@@ -141,7 +141,7 @@ describe("judge: library and expertise", () => {
   it("reports exactly which attributes beat the library", () => {
     const v = judge(samples.holster, {
       ...emptyProfile,
-      libraryAttributes: { "gear:Weapon Damage": 15, "gear:Armor Regen": 3000, "gear:Skill Haste": 12 },
+      libraryAttributes: { "gear:Holster:Weapon Damage": 15, "gear:Holster:Armor Regen": 3000, "gear:Holster:Skill Haste": 12 },
     });
     expect(v.action).toBe("library");
     expect(v.libraryGains).toEqual([{ kind: "attribute", name: "Armor Regen", value: 3445, current: 3000 }]);
@@ -219,5 +219,26 @@ describe("judge: duplicates of an item you're keeping", () => {
   it("measures copies by average roll", () => {
     expect(rollQuality(stElmos(15))).toBeCloseTo((1 + 1 + 1) / 3);
     expect(rollQuality(stElmos(7.5))).toBeCloseTo((0.5 + 1 + 1) / 3);
+  });
+});
+
+describe("judge: the library is per weapon class and gear slot", () => {
+  it("compares a holster with the Holsters library only", () => {
+    const maxedMasks = { "gear:Mask:Weapon Damage": 15, "gear:Mask:Armor Regen": 4925, "gear:Mask:Skill Haste": 12 };
+    expect(judge(samples.holster, { ...emptyProfile, libraryAttributes: maxedMasks }).action).toBe("library");
+    const maxedHolsters = { "gear:Holster:Weapon Damage": 15, "gear:Holster:Armor Regen": 4925, "gear:Holster:Skill Haste": 12 };
+    expect(judge(samples.holster, { ...emptyProfile, libraryAttributes: maxedHolsters }).libraryGains).toEqual([]);
+  });
+
+  it("checks a talent against the weapon's own class", () => {
+    const rifleOnly = { ...emptyProfile, libraryTalents: ["weapon:Rifle:Ranger"] };
+    // Ranger unlocked for rifles doesn't count for this assault rifle.
+    expect(judge(samples.socom, rifleOnly).action).toBe("keep");
+  });
+
+  it("warns instead of guessing when the gear slot is unknown", () => {
+    const v = judge({ ...samples.holster, gearSlot: undefined }, emptyProfile);
+    expect(v.libraryGains).toEqual([]);
+    expect(v.warnings.join()).toMatch(/Gear slot unknown/);
   });
 });

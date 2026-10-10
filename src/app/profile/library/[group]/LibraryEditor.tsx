@@ -1,7 +1,7 @@
 "use client";
 import { useState, useTransition } from "react";
-import type { LibraryAttribute, LibraryScope, LibrarySection } from "@/lib/library";
-import { maxAttributes, saveAttribute, setTalents } from "../actions";
+import type { LibraryAttribute, LibrarySection } from "@/lib/library";
+import { maxAttributes, maxGroup, saveAttribute, setTalents } from "../actions";
 
 const tierColour: Record<string, string> = {
   S: "text-keep",
@@ -21,12 +21,12 @@ const parse = (s: string) => {
 };
 
 export function LibraryEditor({
-  scope,
+  groupId,
   sections,
   initialValues,
   initialUnlocked,
 }: {
-  scope: LibraryScope;
+  groupId: string;
   sections: LibrarySection[];
   initialValues: Record<string, number>;
   initialUnlocked: string[];
@@ -53,30 +53,42 @@ export function LibraryEditor({
 
   const setMax = (attrs: LibraryAttribute[], sectionId?: string) => {
     setValues((v) => ({ ...v, ...Object.fromEntries(attrs.map((a) => [a.key, String(a.max)])) }));
-    save(() => maxAttributes(scope, sectionId ? undefined : attrs.map((a) => a.key), sectionId));
+    save(() => maxAttributes(groupId, sectionId ? undefined : attrs.map((a) => a.key), sectionId));
   };
 
   const commit = (a: LibraryAttribute) => {
     const n = parse(values[a.key] ?? "");
     const clamped = n === null ? null : Math.min(n, a.max);
     setValues((v) => ({ ...v, [a.key]: toText(clamped ?? undefined) }));
-    save(() => saveAttribute(scope, a.key, clamped));
+    save(() => saveAttribute(groupId, a.key, clamped));
   };
 
-  const toggleTalents = (names: string[], on: boolean, sectionId?: string) => {
+  const toggleTalents = (keys: string[], on: boolean) => {
     setUnlocked((u) => {
       const next = new Set(u);
-      for (const n of names) {
+      for (const n of keys) {
         if (on) next.add(n);
         else next.delete(n);
       }
       return next;
     });
-    save(() => setTalents(scope, on, sectionId ? undefined : names, sectionId));
+    save(() => setTalents(groupId, on, keys));
+  };
+
+  const allAttrs = sections.flatMap((s) => (s.kind === "attributes" ? s.attributes : []));
+  const allTalents = sections.flatMap((s) => (s.kind === "talents" ? s.talents.map((t) => t.key) : []));
+  const everything = allAttrs.every(maxed) && allTalents.every((k) => unlocked.has(k));
+  const maxEverything = () => {
+    setValues((v) => ({ ...v, ...Object.fromEntries(allAttrs.map((a) => [a.key, String(a.max)])) }));
+    setUnlocked((u) => new Set([...u, ...allTalents]));
+    save(() => maxGroup(groupId));
   };
 
   return (
     <div className="flex flex-col gap-4">
+      <button className="btn self-start" disabled={everything} onClick={maxEverything}>
+        {everything ? "Everything maxed" : "Max everything"}
+      </button>
       <p className="sticky top-14 z-10 -mx-1 self-end rounded bg-bg/90 px-2 py-1 text-xs text-muted" aria-live="polite">
         {pending ? "Saving…" : status === "saved" ? "Saved" : status === "error" ? "Couldn't save, try again" : ""}
       </p>
@@ -133,7 +145,7 @@ export function LibraryEditor({
           );
         }
 
-        const names = section.talents.map((t) => t.name);
+        const names = section.talents.map((t) => t.key);
         const done = names.filter((n) => unlocked.has(n)).length;
         return (
           <section key={section.id} className="card flex flex-col gap-3">
@@ -145,20 +157,20 @@ export function LibraryEditor({
               <button
                 className="btn ml-auto !px-3 !py-1 text-sm"
                 disabled={done === names.length}
-                onClick={() => toggleTalents(names, true, section.id)}
+                onClick={() => toggleTalents(names, true)}
               >
                 Unlock all
               </button>
             </header>
             <ul className="grid gap-x-4 sm:grid-cols-2">
               {section.talents.map((t) => (
-                <li key={t.name}>
+                <li key={t.key}>
                   <label className="flex items-center gap-2 py-1.5 text-sm">
                     <input
                       type="checkbox"
                       className="size-5 accent-[var(--color-keep)]"
-                      checked={unlocked.has(t.name)}
-                      onChange={(e) => toggleTalents([t.name], e.target.checked)}
+                      checked={unlocked.has(t.key)}
+                      onChange={(e) => toggleTalents([t.key], e.target.checked)}
                     />
                     <span className={`w-4 font-bold ${tierColour[t.tier]}`}>{t.tier}</span>
                     <span className="min-w-0 flex-1">

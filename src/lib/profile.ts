@@ -3,7 +3,7 @@ import { eq } from "drizzle-orm";
 import { db } from "@/db";
 import { exoticsOwned, keptItems, libraryAttributes, libraryTalents, proficiency, settings } from "@/db/schema";
 import { keptKey, type LibraryGain, type Profile, type ScannedItem } from "@/lib/verdict";
-import { libraryKey, findAttribute } from "@/lib/game";
+import { entryKey, groupForItem } from "@/lib/library";
 
 /**
  * The user's profile. When judging a scan, pass its id: a kept copy that came from
@@ -78,7 +78,7 @@ export function setLibraryValues(values: Record<string, number>) {
   });
 }
 
-/** Unlock or lock specific talents, leaving the rest as they are. */
+/** Unlock or lock specific talents (by entryKey), leaving the rest as they are. */
 export function setTalentsUnlocked(names: string[], unlocked: boolean) {
   db.transaction((tx) => {
     for (const name of names) {
@@ -105,20 +105,18 @@ export function removeExotic(name: string) {
   db.delete(exoticsOwned).where(eq(exoticsOwned.name, name)).run();
 }
 
-/** Record that the user extracted an item: raise library values / unlock its talent. */
-export function applyLibraryGains(kind: "weapon" | "gear", gains: LibraryGain[]) {
+/** Record that the user extracted an item: raise its class/slot library values, unlock its talent. */
+export function applyLibraryGains(item: ScannedItem, gains: LibraryGain[]) {
+  const group = groupForItem(item);
+  if (!group) return;
   db.transaction((tx) => {
     for (const g of gains) {
       if (g.kind === "talent") {
-        tx.insert(libraryTalents).values({ name: g.name }).onConflictDoNothing().run();
+        tx.insert(libraryTalents).values({ name: entryKey(group, g.name) }).onConflictDoNothing().run();
         continue;
       }
-      const def =
-        kind === "weapon"
-          ? findAttribute("weapon-minor", g.name)
-          : (findAttribute("gear-core", g.name) ?? findAttribute("gear-minor", g.name));
-      if (!def || g.value === undefined) continue;
-      const key = libraryKey(kind, def.name);
+      if (g.value === undefined) continue;
+      const key = entryKey(group, g.name);
       tx.insert(libraryAttributes).values({ key, value: g.value })
         .onConflictDoUpdate({ target: libraryAttributes.key, set: { value: g.value } }).run();
     }

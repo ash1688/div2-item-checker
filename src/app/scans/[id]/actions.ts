@@ -38,7 +38,7 @@ export async function judgeScan(id: number, raw: unknown): Promise<string | null
 export async function markExtracted(id: number) {
   const scan = getScan(id);
   if (!scan?.item || !scan.verdict) return;
-  applyLibraryGains(scan.item.kind, scan.verdict.libraryGains);
+  applyLibraryGains(scan.item, scan.verdict.libraryGains);
   saveJudgement(id, scan.item, judge(scan.item, getProfile(id)));
   revalidatePath(`/scans/${id}`);
 }
