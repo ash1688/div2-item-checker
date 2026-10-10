@@ -75,6 +75,10 @@ describe("cleanWords", () => {
     expect(cleanWords("| yc iii Lexington 40")).toBe("Lexington");
     expect(cleanWords("Negotiator’s Dilemma")).toBe("Negotiator's Dilemma");
   });
+
+  it("keeps digits that follow letters", () => {
+    expect(cleanWords("SOCOM MK16")).toBe("SOCOM MK16");
+  });
 });
 
 describe("parseTooltip", () => {
@@ -117,5 +121,31 @@ describe("parseTooltip", () => {
       colourRarity: "gear-set",
     });
     expect(item.talent).toBe("Trauma Specialist");
+  });
+
+  it("takes Skill Tier +1.0 from the battery icon, whatever the core row read as", () => {
+    const item = parseTooltip({
+      header: ["Vile"],
+      body: ["Core Attribute", "{0+0s|10s} Tier m", "Attributes", "{+9.6%|+9.6%} Status Effects"],
+      isWeapon: false,
+      colourRarity: "exotic",
+      skillTierIcon: true,
+    });
+    expect(item.core).toEqual([{ name: "Skill Tier", value: 1 }]);
+    expect(item.attributes).toEqual([{ name: "Status Effects", value: 9.6 }]);
+  });
+
+  it("flags greyed-out rows and tolerates misread section headers", () => {
+    const item = parseTooltip({
+      header: ["Fafnir"],
+      body: ["Core Attributes", "~{+15.0%|+15.0%} Shotgun Damage", "~{+11.0%} Damage to Armor", "Autributes", "{+4.0%|+4.0%} Rate of Fire", "Taients"],
+      isWeapon: true,
+      colourRarity: "exotic",
+    });
+    expect(item.core).toEqual([
+      { name: "Shotgun Damage", value: 15, uncertain: true },
+      { name: "Damage to Armor", value: 11, uncertain: true },
+    ]);
+    expect(item.attributes).toEqual([{ name: "Rate of Fire", value: 4 }]);
   });
 });

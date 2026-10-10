@@ -16,9 +16,13 @@ Upload screenshots of Division 2 items (taken on PS5, synced to phone via the Pl
   3. Text rows are found by horizontal ink bands and each is read as one line (tesseract's own layout analysis splits values from names).
   4. Each value box is re-read 16 ways (2 scales × 4 orange tests × 2 page modes, digits-only). The parser votes: impossible values (above the stat's max) don't count, a lost decimal point is put back (value ÷ 10 when it's impossible for the stat, or over 100% for an unknown stat), ties go to readings that kept the decimal point.
   5. No clear majority → the value is flagged and highlighted in the review form; the verdict is marked provisional.
-  6. Talent row (dim grey) is re-read with local contrast at 3 offsets; the most common reading wins.
+  6. Talent row (dim grey) is re-read with local contrast at 3 offsets; the most common reading wins. On the Tinkering screen the selected talent row is highlighted (dark text on orange) and is read without inverting.
   7. Rarity from header colour (red exotic, teal gear set, yellow name text = named) and the "Brand Set"/"Gear Set" footer.
+  8. Rows the colour mask reads nothing from (greyed-out exotic stats on the Tinkering screen) are found with a local-contrast mask (brighter than the surroundings) and read from an upscaled greyscale crop. Their values are always flagged.
+  9. Values without a clear, complete majority (non-zero, read with its decimal point at least once) get 16 more readings from local-contrast masks and the brightest colour channel as greyscale. Pale orange values at small sizes need these.
+  10. Gear core: the yellow Skill Tier battery icon in the header means Skill Tier +1.0 (the only value it rolls), so that row isn't read at all.
 - Accuracy on the 7 PS5 sample captures (each also tested after a JPEG re-save): all names, brands, rarities and talents right; 15/16 values right, and the one misread is flagged.
+- Tinkering-screen captures (SOCOM Mk16, Vile, Fafnir; 2000x1125 re-encodes, each also re-saved): all names, rarities and non-exotic talents right; every value right or flagged. "Mk16" reads as "MK16". Exotic talents aren't in the talent list, so they come through as read ("Tox Delivery"); the verdict ignores them.
 - Uploads that are already upright JPEG/PNG are stored byte-for-byte: re-encoding shifts pixels enough to hurt OCR.
 - Fallback if OCR proves unreliable: Anthropic API or an MCP (decide with the user first).
 
@@ -56,4 +60,4 @@ User agreed: Lexington (named AR, 100/100/100) = Keep, Vile (exotic mask, 96/96)
 - Item Grade (Expertise upgrades) doesn't change rolled attributes, so comparisons ignore it.
 
 ## Pending
-- PS5 captures of an exotic (Fafnir, Vile) and a high-end weapon with a library talent (SOCOM Mk16) to confirm exotic colour detection and weapon reading.
+- Re-run `npm test` locally against the 7 original captures in `samples/ps5/` (not in the repo) to confirm the Tinkering-screen changes didn't affect them. Copy the 3 new captures there too: `socom-mk16.jpg`, `vile.jpg`, `fafnir.jpg`.

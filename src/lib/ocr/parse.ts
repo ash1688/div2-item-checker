@@ -1,5 +1,6 @@
 import {
   type AttributeCategory,
+  editDistance,
   findAttribute,
   findTalent,
   normalizeName,
@@ -19,6 +20,8 @@ export interface TooltipText {
   isWeapon: boolean;
   /** Rarity read from the header colour, if it could be told apart. */
   colourRarity?: "exotic" | "named" | "gear-set" | "other";
+  /** Gear only: the header shows the yellow Skill Tier battery, so the core is Skill Tier +1.0. */
+  skillTierIcon?: boolean;
 }
 
 // OCR letter/digit confusions inside numbers.
@@ -51,10 +54,11 @@ export function parseValue(token: string): RawValue | null {
  * An attribute line: "+9.6% Status Effects", or from the OCR vote
  * "{+9.6%|+9.8%|...} Status Effects" carrying every reading of the value.
  */
-export function parseAttributeLine(line: string): { reads: string[]; name: string } | null {
+export function parseAttributeLine(line: string): { reads: string[]; name: string; faint?: boolean } | null {
   // The stat name runs up to the first non-letter; trailing OCR junk ("- oo a") is ignored.
-  const voted = line.match(/^\{([^}]*)\}\s+([A-Za-z][A-Za-z' ]{2,})/);
-  if (voted) return { reads: voted[1].split("|"), name: voted[2].trim() };
+  // A leading "~" marks a greyed-out row whose value should always be checked.
+  const voted = line.match(/^(~?)\{([^}]*)\}\s+([A-Za-z][A-Za-z' ]{2,})/);
+  if (voted) return { reads: voted[2].split("|"), name: voted[3].trim(), ...(voted[1] && { faint: true }) };
   const m = line.match(new RegExp(`(${VALUE.source})\\s+([A-Za-z][A-Za-z' ]{2,})`));
   if (!m || !parseValue(m[1])) return null;
   return { reads: [m[1]], name: m[m.length - 1].trim() };
@@ -119,10 +123,14 @@ const SECTION = {
   sockets: ["sockets"],
 };
 
-function sectionOf(line: string): keyof typeof SECTION | null {
+export function sectionOf(line: string): keyof typeof SECTION | null {
   const n = normalizeName(line);
+  // Allow a misread letter or two in the longer headers ("Taients", "Autributes").
+  const near = (s: string) =>
+    (n.length >= 6 && s.startsWith(n.slice(0, 4)) && Math.abs(n.length - s.length) <= 2) ||
+    (s.length >= 7 && editDistance(n, s) <= 1);
   for (const [key, names] of Object.entries(SECTION) as [keyof typeof SECTION, string[]][]) {
-    if (names.some((s) => n === s || (n.length >= 6 && s.startsWith(n.slice(0, 4)) && Math.abs(n.length - s.length) <= 2))) {
+    if (names.some((s) => n === s || near(s))) {
       return key;
     }
   }
@@ -133,7 +141,8 @@ function sectionOf(line: string): keyof typeof SECTION | null {
 export function cleanWords(line: string): string {
   return line
     .split(/\s+/)
-    .map((w) => w.replace(/^[^A-Za-z]+|[^A-Za-z'’]+$/g, ""))
+    // Digits after letters stay ("Mk16"); a lone number ("40") is stripped as leading junk.
+    .map((w) => w.replace(/^[^A-Za-z]+|[^A-Za-z0-9'’]+$/g, ""))
     .filter((w) => w.length >= 2 && /^[A-Z]/.test(w) && w !== "LEVEL")
     .join(" ")
     .replace(/’/g, "'");
@@ -169,7 +178,7 @@ export function parseTooltip(t: TooltipText): ScannedItem {
   const set = footer(t.body);
 
   let section: keyof typeof SECTION | null = null;
-  const rawRows: { section: keyof typeof SECTION | null; reads: string[]; name: string }[] = [];
+  const rawRows: { section: keyof typeof SECTION | null; reads: string[]; name: string; faint?: boolean }[] = [];
   const talentLines: string[] = [];
   for (const line of t.body) {
     const s = sectionOf(line);
@@ -211,16 +220,18 @@ export function parseTooltip(t: TooltipText): ScannedItem {
     return {
       name: def?.name ?? r.name,
       value: voted?.value ?? 0,
-      ...((!voted || voted.uncertain) && { uncertain: true }),
+      ...((!voted || voted.uncertain || r.faint) && { uncertain: true }),
     };
   };
-  const core = coreRows.map((r, i) =>
+  const readCore = coreRows.map((r, i) =>
     toAttribute(
       r,
       kind === "gear" ? "gear-core" : i === 0 ? "weapon-core" : "weapon-secondary",
       kind === "weapon" ? weaponClass : undefined,
     ),
   );
+  // Skill Tier only ever rolls +1.0, and its icon is easier to spot than its (often dim) row is to read.
+  const core = kind === "gear" && t.skillTierIcon ? [{ name: "Skill Tier", value: 1 }] : readCore;
   const attributes = minorRows.map((r) => toAttribute(r, kind === "gear" ? "gear-minor" : "weapon-minor"));
 
   const name = headerLines[0] ?? "";
