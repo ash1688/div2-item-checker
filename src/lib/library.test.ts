@@ -66,4 +66,10 @@ describe("library groups", () => {
     const attrs = librarySections(groupById("shotguns")!).find((s) => s.id === "attributes");
     expect(attrs?.kind === "attributes" && attrs.attributes.map((a) => a.name)).not.toContain("Damage to Armor");
   });
+
+  it("lists Critical Hit Chance only once for SMGs, as a core attribute", () => {
+    const attrs = librarySections(groupById("smgs")!).find((s) => s.id === "attributes");
+    expect(attrs?.kind === "attributes" && attrs.attributes.map((a) => a.name)).not.toContain("Critical Hit Chance");
+    expect(attrs?.kind === "attributes" && attrs.attributes.map((a) => a.name)).toContain("Health Damage");
+  });
 });
