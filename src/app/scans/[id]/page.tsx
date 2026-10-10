@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { VerdictBadge } from "@/components/VerdictBadge";
 import { ATTRIBUTES, TALENTS, type AttributeCategory } from "@/lib/game";
+import { ITEMS } from "@/lib/items";
 import { getProfile } from "@/lib/profile";
 import { getScan } from "@/lib/scans";
 import { markExoticOwned, markExtracted, removeScan } from "./actions";
@@ -115,6 +116,9 @@ export default async function ScanPage({ params }: { params: Promise<{ id: strin
             gearCore: namesFor("gear-core"),
             gearMinor: namesFor("gear-minor"),
             talents: TALENTS.map((t) => t.name),
+            weapons: ITEMS.filter((i) => i.kind === "weapon").map((i) => i.name),
+            gear: ITEMS.filter((i) => i.kind === "gear").map((i) => i.name),
+            sets: ITEMS.filter((i) => i.kind === "brand" || i.kind === "gear-set").map((i) => i.name),
           }}
         />
       </section>

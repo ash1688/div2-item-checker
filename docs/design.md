@@ -56,6 +56,7 @@ User agreed: Lexington (named AR, 100/100/100) = Keep, Vile (exotic mask, 96/96)
 ## Game data
 - Talents and tiers: `docs/talents.md` (JSON block at the end seeds the DB).
 - Attribute max rolls: `docs/attributes.md` (JSON block seeds the DB, with OCR aliases).
+- Item names: `docs/items.md` (874 entries: weapons by class and rarity, brands, gear sets, every brand/gear-set piece by slot, named and exotic gear). The OCR'd header name is matched against it (`src/lib/items.ts`, OCR lookalikes like o/0, l/1, e/6 folded together), which corrects the name and supplies weapon class, gear slot, rarity and brand. The review form suggests these names too.
 - Prototype items are out of scope (user decision, 2026-10-09): only normal max values are used. If a scanned item is detected as Prototype, flag it as unsupported rather than scoring it.
 - Named "perfect" attributes exceed normal max: leave them out of god-roll maths.
 - Item Grade (Expertise upgrades) doesn't change rolled attributes, so comparisons ignore it.

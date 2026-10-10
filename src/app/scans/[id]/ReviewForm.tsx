@@ -10,6 +10,9 @@ interface Names {
   gearCore: string[];
   gearMinor: string[];
   talents: string[];
+  weapons: string[];
+  gear: string[];
+  sets: string[];
 }
 
 interface Row {
@@ -140,7 +143,10 @@ export function ReviewForm({
         </select>
       </div>
 
-      <input placeholder="Item name, e.g. SOCOM Mk16" value={name} onChange={(e) => setName(e.target.value)} />
+      <input
+        list={kind === "weapon" ? "weapon-names" : "gear-names"}
+        placeholder="Item name, e.g. SOCOM Mk16"
+        value={name} onChange={(e) => setName(e.target.value)} />
 
       {kind === "weapon" ? (
         <select value={weaponClass} onChange={(e) => setWeaponClass(e.target.value)}>
@@ -155,7 +161,7 @@ export function ReviewForm({
               <option key={s}>{s}</option>
             ))}
           </select>
-          <input placeholder="Brand or gear set" value={brand} onChange={(e) => setBrand(e.target.value)} />
+          <input list="set-names" placeholder="Brand or gear set" value={brand} onChange={(e) => setBrand(e.target.value)} />
         </div>
       )}
 
@@ -189,6 +195,9 @@ export function ReviewForm({
       <datalist id="core-names">{coreNames.map((n) => <option key={n} value={n} />)}</datalist>
       <datalist id="minor-names">{minorNames.map((n) => <option key={n} value={n} />)}</datalist>
       <datalist id="talent-names">{names.talents.map((n) => <option key={n} value={n} />)}</datalist>
+      <datalist id="weapon-names">{names.weapons.map((n) => <option key={n} value={n} />)}</datalist>
+      <datalist id="gear-names">{names.gear.map((n) => <option key={n} value={n} />)}</datalist>
+      <datalist id="set-names">{names.sets.map((n) => <option key={n} value={n} />)}</datalist>
     </form>
   );
 }

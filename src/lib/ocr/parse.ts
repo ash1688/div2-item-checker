@@ -9,6 +9,7 @@ import {
   type Rarity,
   weaponClassFromCore,
 } from "@/lib/game";
+import { matchItem } from "@/lib/items";
 import type { ItemAttribute, ScannedItem } from "@/lib/verdict";
 
 /** What the OCR step hands to the parser. */
@@ -186,6 +187,13 @@ export function gearSlotFromName(name: string): GearSlot | undefined {
 export function parseTooltip(t: TooltipText): ScannedItem {
   const kind = t.isWeapon ? "weapon" : "gear";
   const headerLines = t.header.map(cleanWords).filter(Boolean);
+  // Match against the known item list: fixes OCR slips in the name ("Mk1e") and
+  // supplies the weapon class, gear slot, rarity and brand from the game data.
+  const known = headerLines[0] ? matchItem(headerLines[0], (i) => i.kind === kind) : undefined;
+  const knownSet =
+    kind === "gear" && headerLines[1]
+      ? matchItem(headerLines[1], (i) => i.kind === "brand" || i.kind === "gear-set")
+      : undefined;
   const set = footer(t.body);
 
   let section: keyof typeof SECTION | null = null;
@@ -222,7 +230,8 @@ export function parseTooltip(t: TooltipText): ScannedItem {
 
   const coreRows = rawRows.filter(isCore);
   const minorRows = rawRows.filter((r, i) => !isCore(r, i));
-  const weaponClass = kind === "weapon" && coreRows[0] ? weaponClassFromCore(coreRows[0].name) : undefined;
+  const weaponClass =
+    kind === "weapon" ? (known?.weaponClass ?? (coreRows[0] ? weaponClassFromCore(coreRows[0].name) : undefined)) : undefined;
 
   const toAttribute = (r: (typeof rawRows)[number], category: AttributeCategory, appliesTo?: string): ItemAttribute => {
     // A weapon's core stats are fixed by its class (e.g. shotgun: Shotgun Damage, then
@@ -253,11 +262,13 @@ export function parseTooltip(t: TooltipText): ScannedItem {
     .filter((r) => findAttribute(minorCategory, r.name) || r.name.replace(/[^A-Za-z]/g, "").length >= 6)
     .map((r) => toAttribute(r, minorCategory));
 
-  const name = headerLines[0] ?? "";
+  const name = known?.name ?? headerLines[0] ?? "";
   let rarity: Rarity;
-  if (t.colourRarity === "exotic") rarity = "exotic";
+  if (known?.rarity) rarity = known.rarity;
+  else if (t.colourRarity === "exotic") rarity = "exotic";
   else if (t.colourRarity === "named") rarity = "named";
   else if (t.colourRarity === "gear-set") rarity = "gear-set";
+  else if (knownSet?.kind === "brand" || knownSet?.kind === "gear-set") rarity = knownSet.kind;
   else if (set) rarity = set.kind;
   else rarity = kind === "weapon" ? "high-end" : "brand";
 
@@ -265,9 +276,9 @@ export function parseTooltip(t: TooltipText): ScannedItem {
     kind,
     rarity,
     name,
-    gearSlot: kind === "gear" ? gearSlotFromName(name) : undefined,
+    gearSlot: kind === "gear" ? (known?.gearSlot ?? gearSlotFromName(name)) : undefined,
     // The header reads far more reliably than the footer, so prefer it for the brand.
-    brand: kind === "gear" ? (headerLines[1] ?? set?.brand) : undefined,
+    brand: kind === "gear" ? (known?.set ?? knownSet?.name ?? headerLines[1] ?? set?.brand) : undefined,
     weaponClass,
     core,
     attributes,

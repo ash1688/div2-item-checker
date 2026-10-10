@@ -1,6 +1,6 @@
 // Pulls the fenced JSON seed blocks out of docs/*.md into src/data/*.json,
 // so the research docs stay the single source of truth for game data.
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -34,4 +34,14 @@ const talents = lastJsonBlock("docs/talents.md").map((t) => ({
 
 writeFileSync(join(outDir, "attributes.json"), JSON.stringify(attributes, null, 2) + "\n");
 writeFileSync(join(outDir, "talents.json"), JSON.stringify(talents, null, 2) + "\n");
-console.log(`attributes: ${attributes.length}, talents: ${talents.length}`);
+
+// Item names (weapons, gear pieces, brands, gear sets) for matching OCR'd names.
+const items = existsSync(join(root, "docs/items.md"))
+  ? lastJsonBlock("docs/items.md").map(({ name, kind, rarity, weaponClass, gearSlot, set, baseModel }) =>
+      Object.fromEntries(
+        Object.entries({ name, kind, rarity, weaponClass, gearSlot, set, baseModel }).filter(([, v]) => v != null),
+      ),
+    )
+  : [];
+writeFileSync(join(outDir, "items.json"), JSON.stringify(items, null, 2) + "\n");
+console.log(`attributes: ${attributes.length}, talents: ${talents.length}, items: ${items.length}`);
