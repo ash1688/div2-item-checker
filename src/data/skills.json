@@ -1,0 +1,174 @@
+[
+  {
+    "name": "Explosive Sticky Bomb",
+    "skill": "Sticky Bomb"
+  },
+  {
+    "name": "Burn Sticky Bomb",
+    "skill": "Sticky Bomb"
+  },
+  {
+    "name": "EMP Sticky Bomb",
+    "skill": "Sticky Bomb"
+  },
+  {
+    "name": "Shock Trap",
+    "skill": "Trap"
+  },
+  {
+    "name": "Repair Trap",
+    "skill": "Trap"
+  },
+  {
+    "name": "Shrapnel Trap",
+    "skill": "Trap"
+  },
+  {
+    "name": "Decoy",
+    "skill": "Decoy"
+  },
+  {
+    "name": "Scanner Pulse",
+    "skill": "Pulse"
+  },
+  {
+    "name": "Remote Pulse",
+    "skill": "Pulse"
+  },
+  {
+    "name": "Jammer Pulse",
+    "skill": "Pulse"
+  },
+  {
+    "name": "Banshee Pulse",
+    "skill": "Pulse"
+  },
+  {
+    "name": "Achilles Pulse",
+    "skill": "Pulse"
+  },
+  {
+    "name": "Assault Turret",
+    "skill": "Turret"
+  },
+  {
+    "name": "Incinerator Turret",
+    "skill": "Turret"
+  },
+  {
+    "name": "Sniper Turret",
+    "skill": "Turret"
+  },
+  {
+    "name": "Artillery Turret",
+    "skill": "Turret"
+  },
+  {
+    "name": "Restorer Hive",
+    "skill": "Hive"
+  },
+  {
+    "name": "Stinger Hive",
+    "skill": "Hive"
+  },
+  {
+    "name": "Reviver Hive",
+    "skill": "Hive"
+  },
+  {
+    "name": "Booster Hive",
+    "skill": "Hive"
+  },
+  {
+    "name": "Artificer Hive",
+    "skill": "Hive"
+  },
+  {
+    "name": "Reinforcer Chem Launcher",
+    "skill": "Chem Launcher"
+  },
+  {
+    "name": "Firestarter Chem Launcher",
+    "skill": "Chem Launcher"
+  },
+  {
+    "name": "Riot Foam Chem Launcher",
+    "skill": "Chem Launcher"
+  },
+  {
+    "name": "Oxidizer Chem Launcher",
+    "skill": "Chem Launcher"
+  },
+  {
+    "name": "Blinder Firefly",
+    "skill": "Firefly"
+  },
+  {
+    "name": "Burster Firefly",
+    "skill": "Firefly"
+  },
+  {
+    "name": "Demolisher Firefly",
+    "skill": "Firefly"
+  },
+  {
+    "name": "Explosive Seeker Mine",
+    "skill": "Seeker Mine"
+  },
+  {
+    "name": "Airburst Seeker Mine",
+    "skill": "Seeker Mine"
+  },
+  {
+    "name": "Cluster Seeker Mine",
+    "skill": "Seeker Mine"
+  },
+  {
+    "name": "Mender Seeker Mine",
+    "skill": "Seeker Mine"
+  },
+  {
+    "name": "Striker Drone",
+    "skill": "Drone"
+  },
+  {
+    "name": "Defender Drone",
+    "skill": "Drone"
+  },
+  {
+    "name": "Bombardier Drone",
+    "skill": "Drone"
+  },
+  {
+    "name": "Fixer Drone",
+    "skill": "Drone"
+  },
+  {
+    "name": "Tactician Drone",
+    "skill": "Drone"
+  },
+  {
+    "name": "Bulwark Shield",
+    "skill": "Ballistic Shield"
+  },
+  {
+    "name": "Crusader Shield",
+    "skill": "Ballistic Shield"
+  },
+  {
+    "name": "Deflector Shield",
+    "skill": "Ballistic Shield"
+  },
+  {
+    "name": "Striker Shield",
+    "skill": "Ballistic Shield"
+  },
+  {
+    "name": "Fortified Smart Cover",
+    "skill": "Smart Cover"
+  },
+  {
+    "name": "Precision Smart Cover",
+    "skill": "Smart Cover"
+  }
+]

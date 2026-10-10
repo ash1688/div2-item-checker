@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { categoryById, categoryProgress, EXPERTISE_CATEGORIES, knownType, otherTypes, rankOf } from "@/lib/expertise";
+import { cardById, cardProgress, categoryById, categoryProgress, EXPERTISE_CARDS, knownType, otherTypes, rankOf } from "@/lib/expertise";
 import { judge, type Profile, type ScannedItem } from "@/lib/verdict";
 
 const profile = (proficiency: Record<string, number>): Profile => ({
@@ -10,11 +10,24 @@ const profile = (proficiency: Record<string, number>): Profile => ({
 });
 
 describe("expertise categories", () => {
-  it("has the game's categories: 7 weapon classes, specialization, 6 gear slots, brand and gear sets", () => {
-    expect(EXPERTISE_CATEGORIES.map((c) => c.title)).toEqual([
-      "Rifles", "Assault Rifles", "Marksman Rifles", "Shotguns", "SMGs", "LMGs", "Pistols", "Specialization",
-      "Masks", "Body Armor", "Backpacks", "Gloves", "Holsters", "Kneepads", "Brand Sets", "Gear Sets",
+  it("has four cards: weapons (7 classes + specialization), named & exotics (6 slots), skills, brands", () => {
+    expect(EXPERTISE_CARDS.map((c) => [c.title, c.categories.map((x) => x.title)])).toEqual([
+      ["Weapons", ["Rifles", "Assault Rifles", "Marksman Rifles", "Shotguns", "SMGs", "LMGs", "Pistols", "Specialization"]],
+      ["Named & Exotics", ["Masks", "Body Armor", "Backpacks", "Gloves", "Holsters", "Kneepads"]],
+      ["Skills", ["Skills"]],
+      ["Brands", ["Brands"]],
     ]);
+  });
+
+  it("lists brands with gear sets in their own group", () => {
+    const groups = new Set(categoryById("brands")!.types.map((t) => t.group));
+    expect(groups).toEqual(new Set(["Brand Sets", "Gear Sets"]));
+    expect(categoryById("brands")!.types.map((t) => t.name)).toEqual(expect.arrayContaining(["Unit Alloys", "Ongoing Directive"]));
+  });
+
+  it("adds up a card's progress across its lists", () => {
+    const p = cardProgress(cardById("weapons")!, profile({ "Police M4": 10, "M1A CQB": 10 }));
+    expect(p.proficient).toBe(2);
   });
 
   it("lists every assault rifle: high-end models, named and exotic", () => {
@@ -57,5 +70,14 @@ describe("ranks", () => {
     };
     const v = judge(item, { ...profile({ "Military Mk17": 10 }), libraryAttributes: new Proxy({}, { get: () => 999 }) });
     expect(v.action).toBe("expertise");
+  });
+});
+
+describe("skills", () => {
+  it("lists all 43 skill variants grouped by skill", () => {
+    const skills = categoryById("skills")!;
+    expect(skills.types).toHaveLength(43);
+    expect(skills.types.map((t) => t.name)).toEqual(expect.arrayContaining(["Assault Turret", "Restorer Hive", "Striker Drone"]));
+    expect(new Set(skills.types.map((t) => t.group)).size).toBe(12);
   });
 });

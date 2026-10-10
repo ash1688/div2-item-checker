@@ -1,4 +1,5 @@
 import type { GearSlot, Rarity, WeaponClass } from "@/lib/game";
+import skillsJson from "@/data/skills.json";
 import { ITEMS } from "@/lib/items";
 import { keptKey, type Profile } from "@/lib/verdict";
 
@@ -12,12 +13,21 @@ export interface ExpertiseType {
   group: string;
 }
 
-/** A tile on the Expertise overview, like the in-game "Select Category to Research" screen. */
+/** A list of types with ranks, e.g. Rifles or Skills. Weapon classes and gear slots sit under a top card. */
 export interface ExpertiseCategory {
   id: string;
   title: string;
-  section: "Weapons" | "Named & Exotic Gear" | "Gear Sets & Brands";
+  /** The top-level card this list sits under, when it isn't one itself. */
+  parent?: "weapons" | "named-exotics";
   types: ExpertiseType[];
+}
+
+/** The four cards on the Expertise overview. */
+export interface ExpertiseCard {
+  id: string;
+  title: string;
+  /** The lists it contains: several tiles (weapons, named & exotics) or a single list (skills, brands). */
+  categories: ExpertiseCategory[];
 }
 
 const RARITY_LABEL: Partial<Record<Rarity, string>> = { "high-end": "High-end", named: "Named", exotic: "Exotic" };
@@ -30,7 +40,7 @@ function weapons(id: string, title: string, weaponClass: WeaponClass): Expertise
   const types = ITEMS.filter((i) => i.kind === "weapon" && i.weaponClass === weaponClass)
     .map((i) => ({ name: i.name, group: RARITY_LABEL[i.rarity!] ?? "Other" }))
     .sort(byName);
-  return { id, title, section: "Weapons", types };
+  return { id, title, parent: "weapons", types };
 }
 
 function gear(id: string, title: string, gearSlot: GearSlot): ExpertiseCategory {
@@ -39,7 +49,7 @@ function gear(id: string, title: string, gearSlot: GearSlot): ExpertiseCategory 
   )
     .map((i) => ({ name: i.name, group: RARITY_LABEL[i.rarity!] ?? "Other" }))
     .sort(byName);
-  return { id, title, section: "Named & Exotic Gear", types };
+  return { id, title, parent: "named-exotics", types };
 }
 
 // The six specializations' signature weapons each have a proficiency in game.
@@ -56,7 +66,7 @@ export const EXPERTISE_CATEGORIES: ExpertiseCategory[] = [
   {
     id: "specialization",
     title: "Specialization",
-    section: "Weapons",
+    parent: "weapons",
     types: SPECIALIZATIONS.map((name) => ({ name, group: "Specialization" })),
   },
   gear("masks", "Masks", "Mask"),
@@ -66,20 +76,39 @@ export const EXPERTISE_CATEGORIES: ExpertiseCategory[] = [
   gear("holsters", "Holsters", "Holster"),
   gear("kneepads", "Kneepads", "Kneepads"),
   {
-    id: "brand-sets",
-    title: "Brand Sets",
-    section: "Gear Sets & Brands",
-    types: ITEMS.filter((i) => i.kind === "brand").map((i) => ({ name: i.name, group: "Brand Set" })).sort(byName),
+    id: "skills",
+    title: "Skills",
+    types: (skillsJson as { name: string; skill: string }[]).map((s) => ({ name: s.name, group: s.skill })),
   },
   {
-    id: "gear-sets",
-    title: "Gear Sets",
-    section: "Gear Sets & Brands",
-    types: ITEMS.filter((i) => i.kind === "gear-set").map((i) => ({ name: i.name, group: "Gear Set" })).sort(byName),
+    id: "brands",
+    title: "Brands",
+    // Gear sets have proficiency too; they're listed under brands in their own group.
+    types: [
+      ...ITEMS.filter((i) => i.kind === "brand").map((i) => ({ name: i.name, group: "Brand Sets" })),
+      ...ITEMS.filter((i) => i.kind === "gear-set").map((i) => ({ name: i.name, group: "Gear Sets" })),
+    ].sort((a, b) => a.group.localeCompare(b.group) || a.name.localeCompare(b.name)),
   },
 ];
 
-export const EXPERTISE_SECTIONS = ["Weapons", "Named & Exotic Gear", "Gear Sets & Brands"] as const;
+export const EXPERTISE_CARDS: ExpertiseCard[] = [
+  { id: "weapons", title: "Weapons", categories: EXPERTISE_CATEGORIES.filter((c) => c.parent === "weapons") },
+  { id: "named-exotics", title: "Named & Exotics", categories: EXPERTISE_CATEGORIES.filter((c) => c.parent === "named-exotics") },
+  { id: "skills", title: "Skills", categories: EXPERTISE_CATEGORIES.filter((c) => c.id === "skills") },
+  { id: "brands", title: "Brands", categories: EXPERTISE_CATEGORIES.filter((c) => c.id === "brands") },
+];
+
+export function cardById(id: string): ExpertiseCard | undefined {
+  return EXPERTISE_CARDS.find((c) => c.id === id);
+}
+
+/** Combined progress of everything under a top card. */
+export function cardProgress(card: ExpertiseCard, profile: Profile) {
+  const parts = card.categories.map((c) => categoryProgress(c, profile));
+  const proficient = parts.reduce((n, p) => n + p.proficient, 0);
+  const total = parts.reduce((n, p) => n + p.total, 0);
+  return { proficient, total, complete: total > 0 && proficient === total };
+}
 
 export function categoryById(id: string): ExpertiseCategory | undefined {
   return EXPERTISE_CATEGORIES.find((c) => c.id === id);
@@ -96,7 +125,7 @@ export function rankOf(profile: Profile, name: string): number {
 
 export function categoryProgress(category: ExpertiseCategory, profile: Profile) {
   const proficient = category.types.filter((t) => rankOf(profile, t.name) >= MAX_RANK).length;
-  return { proficient, total: category.types.length, complete: proficient === category.types.length };
+  return { proficient, total: category.types.length, complete: category.types.length > 0 && proficient === category.types.length };
 }
 
 /** Proficiency entries that don't match any known item (typed in by hand before). */

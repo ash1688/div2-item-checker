@@ -1,13 +1,12 @@
-import Link from "next/link";
 import {
-  categoryProgress,
-  EXPERTISE_CATEGORIES,
-  EXPERTISE_SECTIONS,
+  cardProgress,
+  EXPERTISE_CARDS,
   MAX_EXPERTISE_LEVEL,
   otherTypes,
 } from "@/lib/expertise";
 import { getExpertiseLevel, getProfile } from "@/lib/profile";
 import { ExpertiseLevel } from "./ExpertiseLevel";
+import { Tile } from "./Tile";
 
 export const dynamic = "force-dynamic";
 
@@ -15,7 +14,7 @@ export const dynamic = "force-dynamic";
 export default function ExpertisePage() {
   const profile = getProfile();
   const level = getExpertiseLevel();
-  const progress = EXPERTISE_CATEGORIES.map((c) => ({ category: c, p: categoryProgress(c, profile) }));
+  const progress = EXPERTISE_CARDS.map((card) => ({ card, p: cardProgress(card, profile) }));
   const proficient = progress.reduce((n, { p }) => n + p.proficient, 0);
   const total = progress.reduce((n, { p }) => n + p.total, 0);
   const other = otherTypes(profile);
@@ -37,25 +36,24 @@ export default function ExpertisePage() {
         <h2 id="categories-heading" className="text-lg font-semibold">
           Select category
         </h2>
-        {EXPERTISE_SECTIONS.map((section) => (
-          <div key={section} className="flex flex-col gap-2">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">{section}</h3>
-            <ul className="grid grid-cols-2 gap-2 lg:grid-cols-3">
-              {progress
-                .filter(({ category }) => category.section === section)
-                .map(({ category, p }) => (
-                  <li key={category.id}>
-                    <Tile href={`/expertise/${category.id}`} title={category.title} complete={p.complete}>
-                      Proficient with{" "}
-                      <span className="font-semibold tabular-nums">
-                        {p.proficient}/{p.total}
-                      </span>
-                    </Tile>
-                  </li>
-                ))}
-            </ul>
-          </div>
-        ))}
+        <ul className="grid grid-cols-2 gap-2">
+          {progress.map(({ card, p }) => (
+            <li key={card.id}>
+              <Tile href={`/expertise/${card.id}`} title={card.title} complete={p.complete}>
+                {p.total === 0 ? (
+                  "List coming soon"
+                ) : (
+                  <>
+                    Proficient with{" "}
+                    <span className="font-semibold tabular-nums">
+                      {p.proficient}/{p.total}
+                    </span>
+                  </>
+                )}
+              </Tile>
+            </li>
+          ))}
+        </ul>
         {other.length > 0 && (
           <div className="flex flex-col gap-2">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">Other</h3>
@@ -70,19 +68,5 @@ export default function ExpertisePage() {
         )}
       </section>
     </div>
-  );
-}
-
-function Tile({ href, title, complete, children }: { href: string; title: string; complete: boolean; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className={`flex h-full flex-col justify-center gap-1 rounded-md border px-3 py-3 transition-colors ${
-        complete ? "border-shd bg-shd text-black" : "border-line bg-panel-2 hover:border-shd"
-      }`}
-    >
-      <span className="font-semibold">{title}</span>
-      <span className={`text-xs ${complete ? "text-black/70" : "text-muted"}`}>{children}</span>
-    </Link>
   );
 }

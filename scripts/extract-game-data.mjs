@@ -44,4 +44,10 @@ const items = existsSync(join(root, "docs/items.md"))
     )
   : [];
 writeFileSync(join(outDir, "items.json"), JSON.stringify(items, null, 2) + "\n");
-console.log(`attributes: ${attributes.length}, talents: ${talents.length}, items: ${items.length}`);
+
+// Skill variants, each with its own expertise proficiency.
+const skills = existsSync(join(root, "docs/skills.md"))
+  ? lastJsonBlock("docs/skills.md").map(({ name, skill }) => ({ name, skill }))
+  : [];
+writeFileSync(join(outDir, "skills.json"), JSON.stringify(skills, null, 2) + "\n");
+console.log(`attributes: ${attributes.length}, talents: ${talents.length}, items: ${items.length}, skills: ${skills.length}`);
