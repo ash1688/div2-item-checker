@@ -50,14 +50,10 @@ describe("library groups", () => {
     expect(core?.kind === "attributes" && core.attributes.map((a) => a.name)).toEqual(names);
   });
 
-  it("keeps a weapon core apart from the attribute with the same name", () => {
-    const rifles = librarySections(groupById("rifles")!);
-    const core = rifles.find((s) => s.id === "core");
-    const attrs = rifles.find((s) => s.id === "attributes");
-    const coreChd = core?.kind === "attributes" ? core.attributes.find((a) => a.name === "Critical Hit Damage") : undefined;
-    const attrChd = attrs?.kind === "attributes" ? attrs.attributes.find((a) => a.name === "Critical Hit Damage") : undefined;
-    expect(coreChd).toMatchObject({ key: "weapon:Rifle:core:Critical Hit Damage", max: 17 });
-    expect(attrChd).toMatchObject({ key: "weapon:Rifle:Critical Hit Damage", max: 10 });
+  it("stores weapon cores under their own key", () => {
+    const core = librarySections(groupById("rifles")!).find((s) => s.id === "core");
+    const chd = core?.kind === "attributes" ? core.attributes.find((a) => a.name === "Critical Hit Damage") : undefined;
+    expect(chd).toMatchObject({ key: "weapon:Rifle:core:Critical Hit Damage", max: 17 });
   });
 
   it("lists Damage to Armor only once for shotguns, as a core attribute", () => {
@@ -71,5 +67,14 @@ describe("library groups", () => {
     const attrs = librarySections(groupById("smgs")!).find((s) => s.id === "attributes");
     expect(attrs?.kind === "attributes" && attrs.attributes.map((a) => a.name)).not.toContain("Critical Hit Chance");
     expect(attrs?.kind === "attributes" && attrs.attributes.map((a) => a.name)).toContain("Health Damage");
+  });
+
+  it.each(WEAPON_GROUPS.map((g) => [g.title, g.id]))("%s: the second core attribute isn't also a normal attribute", (_title, id) => {
+    const sections = librarySections(groupById(id)!);
+    const core = sections.find((s) => s.id === "core");
+    const attrs = sections.find((s) => s.id === "attributes");
+    const second = core?.kind === "attributes" ? core.attributes[1]?.name : undefined;
+    if (second) expect(attrs?.kind === "attributes" && attrs.attributes.map((a) => a.name)).not.toContain(second);
+    expect(attrs?.kind === "attributes" && attrs.attributes.length).toBe(second ? 12 : 13);
   });
 });
