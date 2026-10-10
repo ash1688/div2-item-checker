@@ -3,7 +3,13 @@ services:
     build: .
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      # HOST_PORT in .env picks the port on this machine (default 3000).
+      - "${HOST_PORT:-3000}:3000"
     env_file: .env
+    environment:
+      # Always the mounted volume, whatever .env says.
+      DATA_DIR: /data
+      # Timezone for dates shown in the app.
+      TZ: ${TZ:-Europe/London}
     volumes:
       - ./data:/data

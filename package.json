@@ -11,7 +11,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "data:extract": "node scripts/extract-game-data.mjs",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "local": "docker compose up -d --build",
+    "local:stop": "docker compose down",
+    "local:logs": "docker compose logs -f"
   },
   "dependencies": {
     "better-sqlite3": "^13.0.3",
