@@ -1,0 +1,883 @@
+[
+  {
+    "name": "Weapon Damage",
+    "category": "gear-core",
+    "color": "red",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Armor",
+    "category": "gear-core",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 170000,
+    "unit": "flat",
+    "aliases": []
+  },
+  {
+    "name": "Skill Tier",
+    "category": "gear-core",
+    "color": "yellow",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 1,
+    "unit": "flat",
+    "aliases": []
+  },
+  {
+    "name": "Critical Hit Chance",
+    "category": "gear-minor",
+    "color": "red",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 6,
+    "unit": "%",
+    "aliases": [
+      "Crit Hit Chance",
+      "CHC"
+    ]
+  },
+  {
+    "name": "Critical Hit Damage",
+    "category": "gear-minor",
+    "color": "red",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": [
+      "Crit Hit Damage",
+      "CHD"
+    ]
+  },
+  {
+    "name": "Headshot Damage",
+    "category": "gear-minor",
+    "color": "red",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": [
+      "HSD"
+    ]
+  },
+  {
+    "name": "Weapon Handling",
+    "category": "gear-minor",
+    "color": "red",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 8,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Armor Regen",
+    "category": "gear-minor",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 4925,
+    "unit": "flat",
+    "aliases": [
+      "Armor Regeneration",
+      "Armour Regen"
+    ]
+  },
+  {
+    "name": "Hazard Protection",
+    "category": "gear-minor",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Health",
+    "category": "gear-minor",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 18935,
+    "unit": "flat",
+    "aliases": []
+  },
+  {
+    "name": "Explosive Resistance",
+    "category": "gear-minor",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Skill Damage",
+    "category": "gear-minor",
+    "color": "yellow",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Skill Haste",
+    "category": "gear-minor",
+    "color": "yellow",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Repair Skills",
+    "category": "gear-minor",
+    "color": "yellow",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 20,
+    "unit": "%",
+    "aliases": [
+      "Skill Repair"
+    ]
+  },
+  {
+    "name": "Status Effects",
+    "category": "gear-minor",
+    "color": "yellow",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Holster",
+      "Backpack",
+      "Gloves",
+      "Kneepads"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Critical Hit Chance",
+    "category": "gear-mod",
+    "color": "red",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 6,
+    "unit": "%",
+    "aliases": [
+      "Crit Hit Chance"
+    ]
+  },
+  {
+    "name": "Critical Hit Damage",
+    "category": "gear-mod",
+    "color": "red",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": [
+      "Crit Hit Damage"
+    ]
+  },
+  {
+    "name": "Headshot Damage",
+    "category": "gear-mod",
+    "color": "red",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Protection from Elites",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 13,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Armor on Kill",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 18935,
+    "unit": "flat",
+    "aliases": [
+      "Armour on Kill"
+    ]
+  },
+  {
+    "name": "Incoming Repairs",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 20,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Bleed Resistance",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Blind/Deaf Resistance",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": [
+      "Blind Deaf Resistance"
+    ]
+  },
+  {
+    "name": "Burn Resistance",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Disorient Resistance",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Disrupt Resistance",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Ensnare Resistance",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Shock Resistance",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Pulse Resistance",
+    "category": "gear-mod",
+    "color": "blue",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Skill Haste",
+    "category": "gear-mod",
+    "color": "yellow",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Skill Duration",
+    "category": "gear-mod",
+    "color": "yellow",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Repair Skills",
+    "category": "gear-mod",
+    "color": "yellow",
+    "appliesTo": [
+      "Mask",
+      "Chest",
+      "Backpack"
+    ],
+    "max": 20,
+    "unit": "%",
+    "aliases": [
+      "Skill Repair"
+    ]
+  },
+  {
+    "name": "Assault Rifle Damage",
+    "category": "weapon-core",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "LMG Damage",
+    "category": "weapon-core",
+    "color": null,
+    "appliesTo": [
+      "LMG"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": [
+      "Light Machine Gun Damage"
+    ]
+  },
+  {
+    "name": "SMG Damage",
+    "category": "weapon-core",
+    "color": null,
+    "appliesTo": [
+      "SMG"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": [
+      "Submachine Gun Damage"
+    ]
+  },
+  {
+    "name": "Shotgun Damage",
+    "category": "weapon-core",
+    "color": null,
+    "appliesTo": [
+      "Shotgun"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Rifle Damage",
+    "category": "weapon-core",
+    "color": null,
+    "appliesTo": [
+      "Rifle"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Marksman Rifle Damage",
+    "category": "weapon-core",
+    "color": null,
+    "appliesTo": [
+      "Marksman Rifle"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": [
+      "MMR Damage"
+    ]
+  },
+  {
+    "name": "Pistol Damage",
+    "category": "weapon-core",
+    "color": null,
+    "appliesTo": [
+      "Pistol"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Health Damage",
+    "category": "weapon-secondary",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle"
+    ],
+    "max": 21,
+    "unit": "%",
+    "aliases": [
+      "Damage to Health"
+    ]
+  },
+  {
+    "name": "Damage to Targets Out of Cover",
+    "category": "weapon-secondary",
+    "color": null,
+    "appliesTo": [
+      "LMG"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": [
+      "Damage to Target Out of Cover",
+      "DMG to target out of cover"
+    ]
+  },
+  {
+    "name": "Critical Hit Chance",
+    "category": "weapon-secondary",
+    "color": null,
+    "appliesTo": [
+      "SMG"
+    ],
+    "max": 21,
+    "unit": "%",
+    "aliases": [
+      "Crit Hit Chance"
+    ]
+  },
+  {
+    "name": "Damage to Armor",
+    "category": "weapon-secondary",
+    "color": null,
+    "appliesTo": [
+      "Shotgun"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": [
+      "Armor Damage"
+    ]
+  },
+  {
+    "name": "Critical Hit Damage",
+    "category": "weapon-secondary",
+    "color": null,
+    "appliesTo": [
+      "Rifle"
+    ],
+    "max": 17,
+    "unit": "%",
+    "aliases": [
+      "Crit Hit Damage"
+    ]
+  },
+  {
+    "name": "Headshot Damage",
+    "category": "weapon-secondary",
+    "color": null,
+    "appliesTo": [
+      "Marksman Rifle"
+    ],
+    "max": 111,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Critical Hit Chance",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 9.5,
+    "unit": "%",
+    "aliases": [
+      "Crit Hit Chance"
+    ]
+  },
+  {
+    "name": "Critical Hit Damage",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": [
+      "Crit Hit Damage"
+    ]
+  },
+  {
+    "name": "Headshot Damage",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Damage to Armor",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 6,
+    "unit": "%",
+    "aliases": [
+      "Armor Damage"
+    ]
+  },
+  {
+    "name": "Health Damage",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 9.5,
+    "unit": "%",
+    "aliases": [
+      "Damage to Health"
+    ]
+  },
+  {
+    "name": "Damage to Targets Out of Cover",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 10,
+    "unit": "%",
+    "aliases": [
+      "Damage to Target Out of Cover"
+    ]
+  },
+  {
+    "name": "Reload Speed",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Stability",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Accuracy",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 12,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Optimal Range",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 24,
+    "unit": "%",
+    "aliases": []
+  },
+  {
+    "name": "Magazine Size",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 12.5,
+    "unit": "%",
+    "aliases": [
+      "Mag Size"
+    ]
+  },
+  {
+    "name": "Rate of Fire",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 5,
+    "unit": "%",
+    "aliases": [
+      "RPM"
+    ]
+  },
+  {
+    "name": "Swap Speed",
+    "category": "weapon-minor",
+    "color": null,
+    "appliesTo": [
+      "Assault Rifle",
+      "LMG",
+      "SMG",
+      "Shotgun",
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "max": 15,
+    "unit": "%",
+    "aliases": [
+      "Weapon Swap Speed"
+    ]
+  }
+]

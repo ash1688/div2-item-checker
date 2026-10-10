@@ -1,0 +1,584 @@
+[
+  {
+    "name": "Strained",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "S"
+  },
+  {
+    "name": "Optimist",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "S"
+  },
+  {
+    "name": "Killer",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "S"
+  },
+  {
+    "name": "Rifleman",
+    "slot": "weapon",
+    "restriction": "Rifle",
+    "tier": "S"
+  },
+  {
+    "name": "Ranger",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "S"
+  },
+  {
+    "name": "Streamline",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "A"
+  },
+  {
+    "name": "Breadbasket",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "A"
+  },
+  {
+    "name": "Overwhelm",
+    "slot": "weapon",
+    "restriction": "LMG",
+    "tier": "A"
+  },
+  {
+    "name": "Frenzy",
+    "slot": "weapon",
+    "restriction": "LMG",
+    "tier": "A"
+  },
+  {
+    "name": "Close & Personal",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "A"
+  },
+  {
+    "name": "Vindictive",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "A"
+  },
+  {
+    "name": "Pressure Point",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "A"
+  },
+  {
+    "name": "In Sync",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "A"
+  },
+  {
+    "name": "Spike",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "A"
+  },
+  {
+    "name": "Future Perfect",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "A"
+  },
+  {
+    "name": "Behind You",
+    "slot": "weapon",
+    "restriction": "Rifle,MMR",
+    "tier": "A"
+  },
+  {
+    "name": "Determined",
+    "slot": "weapon",
+    "restriction": "Rifle,MMR,Pistol",
+    "tier": "A"
+  },
+  {
+    "name": "Boomerang",
+    "slot": "weapon",
+    "restriction": "Rifle",
+    "tier": "B"
+  },
+  {
+    "name": "Measured",
+    "slot": "weapon",
+    "restriction": "AR,SMG,LMG",
+    "tier": "B"
+  },
+  {
+    "name": "Unhinged",
+    "slot": "weapon",
+    "restriction": "LMG",
+    "tier": "B"
+  },
+  {
+    "name": "Precision Strike",
+    "slot": "weapon",
+    "restriction": "AR,Rifle,MMR,LMG",
+    "tier": "B"
+  },
+  {
+    "name": "Back and Forth",
+    "slot": "weapon",
+    "restriction": "AR,Rifle,MMR,SMG,LMG,Shotgun",
+    "tier": "B"
+  },
+  {
+    "name": "Boiling Point",
+    "slot": "weapon",
+    "restriction": "AR,SMG,LMG",
+    "tier": "B"
+  },
+  {
+    "name": "Sadist",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Ignited",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Eyeless",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Thunder Strike",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Immobilize",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Head Scratcher",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Flatline",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Soft Spot",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Perpetuation",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Reformation",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Preservation",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "B"
+  },
+  {
+    "name": "Lucky Shot",
+    "slot": "weapon",
+    "restriction": "Rifle,MMR,Pistol",
+    "tier": "B"
+  },
+  {
+    "name": "First Blood",
+    "slot": "weapon",
+    "restriction": "MMR",
+    "tier": "B"
+  },
+  {
+    "name": "Pummel",
+    "slot": "weapon",
+    "restriction": "Shotgun",
+    "tier": "B"
+  },
+  {
+    "name": "Brazen",
+    "slot": "weapon",
+    "restriction": "Shotgun",
+    "tier": "B"
+  },
+  {
+    "name": "Naked",
+    "slot": "weapon",
+    "restriction": "MMR",
+    "tier": "C"
+  },
+  {
+    "name": "Fast Hands",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "C"
+  },
+  {
+    "name": "Steady Handed",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "C"
+  },
+  {
+    "name": "Stabilize",
+    "slot": "weapon",
+    "restriction": "AR,SMG",
+    "tier": "C"
+  },
+  {
+    "name": "Outsider",
+    "slot": "weapon",
+    "restriction": "SMG",
+    "tier": "C"
+  },
+  {
+    "name": "Overflowing",
+    "slot": "weapon",
+    "restriction": "AR",
+    "tier": "C"
+  },
+  {
+    "name": "Finisher",
+    "slot": "weapon",
+    "restriction": "Pistol",
+    "tier": "C"
+  },
+  {
+    "name": "Salvage",
+    "slot": "weapon",
+    "restriction": "Pistol",
+    "tier": "C"
+  },
+  {
+    "name": "Pumped Up",
+    "slot": "weapon",
+    "restriction": "Shotgun",
+    "tier": "C"
+  },
+  {
+    "name": "Sledgehammer",
+    "slot": "weapon",
+    "restriction": "Any",
+    "tier": "C"
+  },
+  {
+    "name": "Unwavering",
+    "slot": "weapon",
+    "restriction": "SMG",
+    "tier": "D"
+  },
+  {
+    "name": "On Empty",
+    "slot": "weapon",
+    "restriction": "AR",
+    "tier": "D"
+  },
+  {
+    "name": "Near Sighted",
+    "slot": "weapon",
+    "restriction": "AR",
+    "tier": "D"
+  },
+  {
+    "name": "Obliterate",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "S"
+  },
+  {
+    "name": "Glass Cannon",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "S"
+  },
+  {
+    "name": "Headhunter",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "S"
+  },
+  {
+    "name": "Kinetic Momentum",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "S"
+  },
+  {
+    "name": "Intimidate",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Spotter",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Overwatch",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Spark",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Empathic Resolve",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Unbreakable",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Focus",
+    "slot": "chest",
+    "restriction": "Scope 8x+",
+    "tier": "A"
+  },
+  {
+    "name": "Gunslinger",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Tag Team",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Skilled",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Explosive Delivery",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Vanguard",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Protected Reload",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Entrench",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Efficient",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Braced",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "C"
+  },
+  {
+    "name": "Trauma",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "C"
+  },
+  {
+    "name": "Tamper Proof",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "C"
+  },
+  {
+    "name": "Mad Bomber",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "C"
+  },
+  {
+    "name": "Reassigned",
+    "slot": "chest",
+    "restriction": "None",
+    "tier": "D"
+  },
+  {
+    "name": "Vigilance",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "S"
+  },
+  {
+    "name": "Combined Arms",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "S"
+  },
+  {
+    "name": "Concussion",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Composure",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Tech Support",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Wicked",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Bloodsucker",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Versatile",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Unstoppable Force",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "A"
+  },
+  {
+    "name": "Shock and Awe",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Safeguard",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Companion",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Opportunistic",
+    "slot": "backpack",
+    "restriction": "Shotgun,MMR",
+    "tier": "B"
+  },
+  {
+    "name": "Clutch",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Adrenaline Rush",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Leadership",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Galvanize",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Overclock",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Creeping Death",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Calculated",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "B"
+  },
+  {
+    "name": "Energize",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "C"
+  },
+  {
+    "name": "Protector",
+    "slot": "backpack",
+    "restriction": "None",
+    "tier": "D"
+  }
+]

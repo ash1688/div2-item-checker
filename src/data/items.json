@@ -1,0 +1,5713 @@
+[
+  {
+    "name": "ACR",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "ACR-E",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "AK-M",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Military AK-M",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Black Market AK-M",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "AUG A3-CQC",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Carbine 7",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "CTAR-21",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "F2000",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "FAL",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "FAL SA-58",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "FAL SA-58 Para",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "FAMAS 2010",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Military G36",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "G36 C",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "G36 Enhanced",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Honey Badger",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Police M4",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Mk16",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "SOCOM Mk16",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Tactical Mk16",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Military P416",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Custom P416 G3",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "PDR",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "SIG 556",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "TKB-408",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "The Archivist",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "ACR-E"
+  },
+  {
+    "name": "First Sight",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "AK-M"
+  },
+  {
+    "name": "Manic",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "Black Market AK-M"
+  },
+  {
+    "name": "Invisible Hand",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "AUG A3-CQC"
+  },
+  {
+    "name": "The Drill",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "Carbine 7"
+  },
+  {
+    "name": "The Railsplitter",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "CTAR-21"
+  },
+  {
+    "name": "Shield Splinterer",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "F2000"
+  },
+  {
+    "name": "Goalie",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "FAL"
+  },
+  {
+    "name": "Huntsman",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "FAMAS 2010"
+  },
+  {
+    "name": "Burn Out",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "FAMAS 2010"
+  },
+  {
+    "name": "Caretaker",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "G36 Enhanced"
+  },
+  {
+    "name": "Born Great",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "Military G36"
+  },
+  {
+    "name": "Savage Wolverine",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "Honey Badger"
+  },
+  {
+    "name": "Pyromaniac",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "Police M4"
+  },
+  {
+    "name": "Lexington",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "Police M4"
+  },
+  {
+    "name": "Lud",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "SOCOM Mk16"
+  },
+  {
+    "name": "Steamer",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "Tactical Mk16"
+  },
+  {
+    "name": "Glory Daze",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "Custom P416 G3"
+  },
+  {
+    "name": "Test Subject",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "PDR"
+  },
+  {
+    "name": "First Bloom",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "PDR"
+  },
+  {
+    "name": "Mechanical Animal",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "SIG 556"
+  },
+  {
+    "name": "Kingbreaker",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Assault Rifle",
+    "baseModel": "TKB-408"
+  },
+  {
+    "name": "The Bighorn",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Agitator",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Strega",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "St. Elmo's Engine",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Caduceus",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Eagle Bearer",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Capacitor",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Chameleon",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Assault Rifle"
+  },
+  {
+    "name": "Stoner LAMG",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Military L86 LSW",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Custom L86 A2",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "GR9",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "M249 B",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Tactical M249 Para",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Military MK46",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Classic M60",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Military M60 E4",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Black Market M60 E6",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "MG5",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Infantry MG5",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "IWI NEGEV",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Classic RPK-74",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Military RPK-74 M",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Black Market RPK-74 E",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Quiet Roar",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Stoner LAMG"
+  },
+  {
+    "name": "Tabula Rasa",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Military L86 LSW"
+  },
+  {
+    "name": "Insult to Injury",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Custom L86 A2"
+  },
+  {
+    "name": "Dare",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "GR9"
+  },
+  {
+    "name": "Cricket",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "GR9"
+  },
+  {
+    "name": "Black Friday",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "M249 B"
+  },
+  {
+    "name": "The Stinger",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "M249 B"
+  },
+  {
+    "name": "Gear Shift",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Military MK46"
+  },
+  {
+    "name": "Good Times",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Black Market M60 E6"
+  },
+  {
+    "name": "The Headline-grabber",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Military M60 E4"
+  },
+  {
+    "name": "Big Show",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "MG5"
+  },
+  {
+    "name": "Sleipner",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "MG5"
+  },
+  {
+    "name": "Bellringer",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Infantry MG5"
+  },
+  {
+    "name": "Carnage",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "IWI NEGEV"
+  },
+  {
+    "name": "New Reliable",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Black Market RPK-74 E"
+  },
+  {
+    "name": "Rusty",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "LMG",
+    "baseModel": "Classic RPK-74"
+  },
+  {
+    "name": "Bluescreen",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Vertigo",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Pestilence",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Iron Lung",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Bullet King",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Pakhan",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Big Alejandro",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "LMG"
+  },
+  {
+    "name": "Converted SMG-9 A2",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Converted SMG-9",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "MP5 ST",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "MP5A2",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "MP5-N",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "CMMG Banshee",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "PP-19",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Enhanced PP-19",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "AUG A3 Para XS",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Enhanced AUG A3P",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Tactical AUG A3P",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Vector SBR .45 ACP",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Vector SBR 9mm",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Tactical Vector SBR 9mm",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "MP7",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Police T821",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Black Market T821",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Police UMP-45",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Tactical UMP-45",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "M1928",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Tommy Gun",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "P90",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "MPX",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Purist",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Converted SMG-9 A2"
+  },
+  {
+    "name": "Cabaret",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "MP5 ST"
+  },
+  {
+    "name": "The Grudge",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "CMMG Banshee"
+  },
+  {
+    "name": "Cold Relations",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Enhanced PP-19"
+  },
+  {
+    "name": "Interchange",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Enhanced AUG A3P"
+  },
+  {
+    "name": "Froth",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Tactical Vector SBR 9mm"
+  },
+  {
+    "name": "Dark Winter",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Vector SBR .45 ACP"
+  },
+  {
+    "name": "Swap Chain",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "MP7"
+  },
+  {
+    "name": "Old Glory",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Police T821"
+  },
+  {
+    "name": "Slingshot",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Tactical UMP-45"
+  },
+  {
+    "name": "The Sleigher",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Tommy Gun"
+  },
+  {
+    "name": "Grown Great",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "Tommy Gun"
+  },
+  {
+    "name": "Emeline's Guard",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "P90"
+  },
+  {
+    "name": "Safety Distance",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "MPX"
+  },
+  {
+    "name": "The Apartment",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "SMG",
+    "baseModel": "MPX"
+  },
+  {
+    "name": "Lady Death",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Ouroboros",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Oxpecker",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Underboss",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "The Chatterbox",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "Backfire",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "SMG"
+  },
+  {
+    "name": "ACS-12",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Double Barrel Shotgun",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Double Barrel Sawed Off",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "KSG Shotgun",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Custom M870 MCS",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "M870 Express",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Military M870",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Black Market SASG-12 S",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "SASG-12",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Tactical SASG-12 K",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "SPAS-12",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Marine Super 90",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Super 90",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Tactical Super 90 SBS",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "SIX12",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Stack Broker",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "ACS-12"
+  },
+  {
+    "name": "Lefty",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "ACS-12"
+  },
+  {
+    "name": "Rock n' Roll",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "ACS-12"
+  },
+  {
+    "name": "Boomstick",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "Double Barrel Shotgun"
+  },
+  {
+    "name": "Firestarter",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "Double Barrel Sawed Off"
+  },
+  {
+    "name": "Backup Boomstick",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "Double Barrel Sawed Off"
+  },
+  {
+    "name": "The Send-Off",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "KSG Shotgun"
+  },
+  {
+    "name": "Lockdown",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "M870 Express"
+  },
+  {
+    "name": "Cuélebre",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "Military M870"
+  },
+  {
+    "name": "Tsunami",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "Tactical SASG-12 K"
+  },
+  {
+    "name": "Thorn",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "SPAS-12"
+  },
+  {
+    "name": "Like Glue",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "Super 90"
+  },
+  {
+    "name": "Enforcer",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "Super 90"
+  },
+  {
+    "name": "The Mop",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Shotgun",
+    "baseModel": "SIX12"
+  },
+  {
+    "name": "Overlord",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Fafnir",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Sweet Dreams",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Lullaby",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Sheriff",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "Scorpio",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Shotgun"
+  },
+  {
+    "name": "ACR SS",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "UIC15 MOD2",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "M16A2",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Classic M1A",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "SOCOM M1A",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "M1A CQB",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Lightweight M4",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "LVOA-C",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Urban MDR",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Military Mk17",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Police Mk17",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "SIG 716",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "SIG 716 CQB",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "USC .45 ACP",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Resolute Mk47",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "1886",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Trader",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "ACR SS"
+  },
+  {
+    "name": "The Claw",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "UIC15 MOD2"
+  },
+  {
+    "name": "Whisper",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "M16A2"
+  },
+  {
+    "name": "Baker's Dozen",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "Classic M1A"
+  },
+  {
+    "name": "Stage Left",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "SOCOM M1A"
+  },
+  {
+    "name": "Cooler",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "M1A CQB"
+  },
+  {
+    "name": "Surge",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "LVOA-C"
+  },
+  {
+    "name": "Teapot",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "Lightweight M4"
+  },
+  {
+    "name": "Brain Break",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "Urban MDR"
+  },
+  {
+    "name": "Everlasting Gaze",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "Police Mk17"
+  },
+  {
+    "name": "Artist's Tool",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "SIG 716 CQB"
+  },
+  {
+    "name": "Achilles",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "USC .45 ACP"
+  },
+  {
+    "name": "Harmony",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "Resolute Mk47"
+  },
+  {
+    "name": "The Virginian",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Rifle",
+    "baseModel": "1886"
+  },
+  {
+    "name": "Steel & Sons ACR",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Ruthless",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Merciless",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Bittersweet",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Doctor Home",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Vindicator",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "The Ravenous",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "Diamondback",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Rifle"
+  },
+  {
+    "name": "SOCOM Mk20 SSR",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "G28",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "M700 Carbon",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "M700 Tactical",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Model 700",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Paratrooper SVD",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Surplus SVD",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Covert SRS",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "SRS A1",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Classic M44 Carbine",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Hunting M44",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Custom M44",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "SR-1",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Tactical .308",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "The Darkness",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "SOCOM Mk20 SSR"
+  },
+  {
+    "name": "Relic",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "G28"
+  },
+  {
+    "name": "Brutus",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "M700 Carbon"
+  },
+  {
+    "name": "Ekim's Long Stick",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "Model 700"
+  },
+  {
+    "name": "Commando",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "Paratrooper SVD"
+  },
+  {
+    "name": "Handbasket",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "Surplus SVD"
+  },
+  {
+    "name": "Incendia",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "SRS A1"
+  },
+  {
+    "name": "Pinprick",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "Covert SRS"
+  },
+  {
+    "name": "Instigator",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "Custom M44"
+  },
+  {
+    "name": "Oh Carol",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "Classic M44 Carbine"
+  },
+  {
+    "name": "The White Death",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "Classic M44 Carbine"
+  },
+  {
+    "name": "Designated Hitter",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "SR-1"
+  },
+  {
+    "name": "Adrestia",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "SR-1"
+  },
+  {
+    "name": "Scalpel",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Marksman Rifle",
+    "baseModel": "Tactical .308"
+  },
+  {
+    "name": "Sacrum Imperium",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Shroud",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Dread Edict",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Mantis",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Prima Donna",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "Nemesis",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Marksman Rifle"
+  },
+  {
+    "name": "93R",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "D50",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "M1911",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "M45A1",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Tactical M1911",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Military M9",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Officer's M9 A1",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Custom PF45",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "First Wave PF45",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Px4 Storm Type F",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Px4 Storm Type T",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Diceros",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Snubnosed Diceros",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "586 Magnum",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Police 686 Magnum",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "X-45",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "X-45 Tactical",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "KARD-45",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Maxim 9",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "P320 XCompact",
+    "kind": "weapon",
+    "rarity": "high-end",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Sharpshooter 93R",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "93R"
+  },
+  {
+    "name": "Survivalist D50",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "D50"
+  },
+  {
+    "name": "Diceros Special",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "Diceros"
+  },
+  {
+    "name": "Rabid D50",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "D50"
+  },
+  {
+    "name": "Quickstep",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "M45A1"
+  },
+  {
+    "name": "Mozambique Special",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "M45A1"
+  },
+  {
+    "name": "Lightning Rod",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "Custom PF45"
+  },
+  {
+    "name": "Orbit",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "586 Magnum"
+  },
+  {
+    "name": "Prophet",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "Police 686 Magnum"
+  },
+  {
+    "name": "The Harvest",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "Police 686 Magnum"
+  },
+  {
+    "name": "TDI \"Kard\" Custom",
+    "kind": "weapon",
+    "rarity": "named",
+    "weaponClass": "Pistol",
+    "baseModel": "KARD-45"
+  },
+  {
+    "name": "Tempest",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Liberty",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Whiplash",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Mosquito",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Busy Little Bee",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "Regulus",
+    "kind": "weapon",
+    "rarity": "exotic",
+    "weaponClass": "Pistol"
+  },
+  {
+    "name": "5.11 Tactical",
+    "kind": "brand"
+  },
+  {
+    "name": "Airaldi Holdings",
+    "kind": "brand"
+  },
+  {
+    "name": "Alps Summit Armament",
+    "kind": "brand"
+  },
+  {
+    "name": "Badger Tuff",
+    "kind": "brand"
+  },
+  {
+    "name": "Belstone Armory",
+    "kind": "brand"
+  },
+  {
+    "name": "Brazos de Arcabuz",
+    "kind": "brand"
+  },
+  {
+    "name": "Česká Výroba s.r.o.",
+    "kind": "brand"
+  },
+  {
+    "name": "China Light Industries Corporation",
+    "kind": "brand"
+  },
+  {
+    "name": "Douglas & Harding",
+    "kind": "brand"
+  },
+  {
+    "name": "Edelweiss GPz",
+    "kind": "brand"
+  },
+  {
+    "name": "Electrique",
+    "kind": "brand"
+  },
+  {
+    "name": "Empress International",
+    "kind": "brand"
+  },
+  {
+    "name": "Fenris Group AB",
+    "kind": "brand"
+  },
+  {
+    "name": "Gila Guard",
+    "kind": "brand"
+  },
+  {
+    "name": "Golan Gear Ltd",
+    "kind": "brand"
+  },
+  {
+    "name": "Grupo Sombra S.A.",
+    "kind": "brand"
+  },
+  {
+    "name": "Habsburg Guard",
+    "kind": "brand"
+  },
+  {
+    "name": "Hana-U Corporation",
+    "kind": "brand"
+  },
+  {
+    "name": "Imminence Armaments",
+    "kind": "brand"
+  },
+  {
+    "name": "Legatus S.p.A.",
+    "kind": "brand"
+  },
+  {
+    "name": "Lengmo",
+    "kind": "brand"
+  },
+  {
+    "name": "Murakami Industries",
+    "kind": "brand"
+  },
+  {
+    "name": "Overlord Armaments",
+    "kind": "brand"
+  },
+  {
+    "name": "Palisade Steelworks",
+    "kind": "brand"
+  },
+  {
+    "name": "Petrov Defense Group",
+    "kind": "brand"
+  },
+  {
+    "name": "Providence Defense",
+    "kind": "brand"
+  },
+  {
+    "name": "Richter & Kaiser GmbH",
+    "kind": "brand"
+  },
+  {
+    "name": "Royal Works",
+    "kind": "brand"
+  },
+  {
+    "name": "Shiny Monkey Gear",
+    "kind": "brand"
+  },
+  {
+    "name": "Sokolov Concern",
+    "kind": "brand"
+  },
+  {
+    "name": "Unit Alloys",
+    "kind": "brand"
+  },
+  {
+    "name": "Urban Lookout",
+    "kind": "brand"
+  },
+  {
+    "name": "Uzina Getica",
+    "kind": "brand"
+  },
+  {
+    "name": "Walker, Harris & Co.",
+    "kind": "brand"
+  },
+  {
+    "name": "Wyvern Wear",
+    "kind": "brand"
+  },
+  {
+    "name": "Yaahl Gear",
+    "kind": "brand"
+  },
+  {
+    "name": "Zwiadowka Sp. z o.o.",
+    "kind": "brand"
+  },
+  {
+    "name": "Aces & Eights",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Aegis",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Breaking Point",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Cavalier",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Concentrated Company",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Core Strength",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Eclipse Protocol",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Ember Engine",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Foundry Bulwark",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Future Initiative",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Hard Wired",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Heartbreaker",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Hotshot",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Hunter's Fury",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Measured Assembly",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Negotiator's Dilemma",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Ongoing Directive",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Ortiz: Exuro",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Ortiz: Reficere",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Refactor",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Rigger",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Striker's Battlegear",
+    "kind": "gear-set"
+  },
+  {
+    "name": "System Corruption",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Tip of the Spear",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Tipping Scales",
+    "kind": "gear-set"
+  },
+  {
+    "name": "True Patriot",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Umbra Initiative",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Virtuoso",
+    "kind": "gear-set"
+  },
+  {
+    "name": "Protective Tactical Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "TacLite Plate Carrier",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "Compact Holster Pouch",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "LBE Compact Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "AMP24",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "All Hazards Nitro Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "All Hazards Prime Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "RUSH12 Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "RUSH24 Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "RUSH72 Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "Station Grip Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "EXO.K1 Kneepad",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "Aphrodite Glint Concealer",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Athena Missile Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Artemis Fast Draw Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Hera Pouch-Holster Combo",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Apollo Operator Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Demeter Quick-Stash",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Heracles Dexterity Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Persephone Precision Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Dionysus Rounded Padding",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "High Altitude O2 Facer",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Reinforced Utility Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "X-TREYME Pro Ribcage",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Torque Enabled Leg Rig",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Element Outdoors Rucksack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Mountain Hiking Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Trekking Elite Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Climbing Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Hybrid FL Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Clutch XO-Skin Sport Pads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Combat Mask \"Cete\"",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Strong Vest \"Bauson\"",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Holster \"Huffle\"",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Long Range Pack \"Sett\"",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Roamer Pack \"Sow\"",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Winter Carryall \"Bergmann\"",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Durability Gloves \"Meles\"",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Knee Mesh \"Jonti\"",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Bevor Air Guard",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Belstone Armory"
+  },
+  {
+    "name": "Lancer Chestplate System",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Belstone Armory"
+  },
+  {
+    "name": "Fauld & Tasset Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Belstone Armory"
+  },
+  {
+    "name": "Cavalry TAC-Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Belstone Armory"
+  },
+  {
+    "name": "Vambrace Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Belstone Armory"
+  },
+  {
+    "name": "Poleyn Knee Protector",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Belstone Armory"
+  },
+  {
+    "name": "Reyes Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Brazos de Arcabuz"
+  },
+  {
+    "name": "Feugo Campea",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Brazos de Arcabuz"
+  },
+  {
+    "name": "Guerra Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Brazos de Arcabuz"
+  },
+  {
+    "name": "Llave Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Brazos de Arcabuz"
+  },
+  {
+    "name": "Caballería Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Brazos de Arcabuz"
+  },
+  {
+    "name": "Ceriñola Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Brazos de Arcabuz"
+  },
+  {
+    "name": "Rapid Deployment Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Česká Výroba s.r.o."
+  },
+  {
+    "name": "Mechanized Infantry Armor",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Česká Výroba s.r.o."
+  },
+  {
+    "name": "Reconnaissance Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Česká Výroba s.r.o."
+  },
+  {
+    "name": "Guerilla Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Česká Výroba s.r.o."
+  },
+  {
+    "name": "NBC Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Česká Výroba s.r.o."
+  },
+  {
+    "name": "Logistics Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Česká Výroba s.r.o."
+  },
+  {
+    "name": "MJ 54",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "China Light Industries Corporation"
+  },
+  {
+    "name": "PS 282",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "China Light Industries Corporation"
+  },
+  {
+    "name": "FK 910",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "China Light Industries Corporation"
+  },
+  {
+    "name": "KM 9",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "China Light Industries Corporation"
+  },
+  {
+    "name": "ST 520",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "China Light Industries Corporation"
+  },
+  {
+    "name": "HX 02",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "China Light Industries Corporation"
+  },
+  {
+    "name": "\"Lomond\" Medium Breather",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Douglas & Harding"
+  },
+  {
+    "name": "\"Ericht\" Chest System",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Douglas & Harding"
+  },
+  {
+    "name": "\"Awe\" Thigh Mag/Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Douglas & Harding"
+  },
+  {
+    "name": "\"Morar\" Holster System",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Douglas & Harding"
+  },
+  {
+    "name": "\"Maree\" Range Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Douglas & Harding"
+  },
+  {
+    "name": "\"Lochy\" Hand Savers",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Douglas & Harding"
+  },
+  {
+    "name": "\"Tay\" Protective Pads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Douglas & Harding"
+  },
+  {
+    "name": "Field Medic Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Edelweiss GPz"
+  },
+  {
+    "name": "First Responder Chest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Edelweiss GPz"
+  },
+  {
+    "name": "Corpsman Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Edelweiss GPz"
+  },
+  {
+    "name": "Crash Kit Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Edelweiss GPz"
+  },
+  {
+    "name": "Sterile Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Edelweiss GPz"
+  },
+  {
+    "name": "Brace Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Edelweiss GPz"
+  },
+  {
+    "name": "Electrique Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Electrique"
+  },
+  {
+    "name": "Electrique Chest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Electrique"
+  },
+  {
+    "name": "Electrique Holster<br />",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Electrique"
+  },
+  {
+    "name": "Electrique Back",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Electrique"
+  },
+  {
+    "name": "Electrique Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Electrique"
+  },
+  {
+    "name": "Electrique Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Electrique"
+  },
+  {
+    "name": "\"New Face\" Ventilator",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Empress International"
+  },
+  {
+    "name": "B.O.T. Protector",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Empress International"
+  },
+  {
+    "name": "Rugged Gun Guard",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Empress International"
+  },
+  {
+    "name": "Swag Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Empress International"
+  },
+  {
+    "name": "Faux Leather Mitts",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Empress International"
+  },
+  {
+    "name": "Wear-anywhere Protector",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Empress International"
+  },
+  {
+    "name": "Luktskydd Protective Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Förstärkt Breastplate",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Harnesk Armor",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Stridsväst Combat Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Fodral Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Stridssäck Combat Sack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Tassar Fist Enhancers",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Knäskydd Knee Protectors",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Javelina Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Armadillo Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Iguana Hauberk",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Jackrabbit Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Banner Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Big Horn Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Gila Inventory System",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Diamondback Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Sidewinder Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Emet Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Golan Gear Ltd"
+  },
+  {
+    "name": "Chatzatz Chest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Golan Gear Ltd"
+  },
+  {
+    "name": "Shomer Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Golan Gear Ltd"
+  },
+  {
+    "name": "Chemar Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Golan Gear Ltd"
+  },
+  {
+    "name": "Ayal Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Golan Gear Ltd"
+  },
+  {
+    "name": "Nahar Knees",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Golan Gear Ltd"
+  },
+  {
+    "name": "Penumbra Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Grupo Sombra S.A."
+  },
+  {
+    "name": "Umbra Plate Carrier",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Grupo Sombra S.A."
+  },
+  {
+    "name": "Tenebrous Sidearm Mount",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Grupo Sombra S.A."
+  },
+  {
+    "name": "Antumbra Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Grupo Sombra S.A."
+  },
+  {
+    "name": "Dusk Attack Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Grupo Sombra S.A."
+  },
+  {
+    "name": "Sundown Knee Guards",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Grupo Sombra S.A."
+  },
+  {
+    "name": "HG Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Habsburg Guard"
+  },
+  {
+    "name": "HG Chest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Habsburg Guard"
+  },
+  {
+    "name": "HG Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Habsburg Guard"
+  },
+  {
+    "name": "HG Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Habsburg Guard"
+  },
+  {
+    "name": "HG Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Habsburg Guard"
+  },
+  {
+    "name": "HG Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Habsburg Guard"
+  },
+  {
+    "name": "Filter Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Hana-U Corporation"
+  },
+  {
+    "name": "Flak Jacket",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Hana-U Corporation"
+  },
+  {
+    "name": "Duel Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Hana-U Corporation"
+  },
+  {
+    "name": "Crash Bag",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Hana-U Corporation"
+  },
+  {
+    "name": "Plated Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Hana-U Corporation"
+  },
+  {
+    "name": "Knee Savers",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Hana-U Corporation"
+  },
+  {
+    "name": "Prototype Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Urban Assault Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Spider Silk Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Mission Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Infiltrator Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Operator Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Bauta Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Legatus S.p.A."
+  },
+  {
+    "name": "Lupus Chestplate",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Legatus S.p.A."
+  },
+  {
+    "name": "Tribunus Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Legatus S.p.A."
+  },
+  {
+    "name": "Alpine Carrier",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Legatus S.p.A."
+  },
+  {
+    "name": "Praefactus Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Legatus S.p.A."
+  },
+  {
+    "name": "Ibex Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Legatus S.p.A."
+  },
+  {
+    "name": "Lengmo Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Lengmo"
+  },
+  {
+    "name": "Lengmo Bomb Armor",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Lengmo"
+  },
+  {
+    "name": "Lengmo Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Lengmo"
+  },
+  {
+    "name": "Lengmo Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Lengmo"
+  },
+  {
+    "name": "Lengmo Ballistic Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Lengmo"
+  },
+  {
+    "name": "Lengmo Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Lengmo"
+  },
+  {
+    "name": "\"Mengu\" Face Protection",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "\"Tatami\" Cuirass",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "\"Haidate\" Thigh System",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "\"Horo\" CarryBack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "\"Sashimono\" Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "\"Kote\" Hand Guards",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "\"Yugake\" Firearm Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "\"Suneate\" Knee Braces",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "\"Deadstick\" Protection Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "\"Big Drum\" Body Armor",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "\"Fortitude\" Plate Carrier",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "\"Pointblank\" Protection Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "\"Graffham\" Thigh Combo",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "\"Vert\" Carry Rail",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "\"Neptune\" Protection Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "\"Dingson\" Protection Pads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "Steelwork Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Palisade Steelworks"
+  },
+  {
+    "name": "Steelwork Chestplate",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Palisade Steelworks"
+  },
+  {
+    "name": "Steelwork Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Palisade Steelworks"
+  },
+  {
+    "name": "Steelwork Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Palisade Steelworks"
+  },
+  {
+    "name": "Steelwork Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Palisade Steelworks"
+  },
+  {
+    "name": "Steelwork Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Palisade Steelworks"
+  },
+  {
+    "name": "Guardrail VI Face Rig",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "Crew-Adapted Chest Rig",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "Ops Armor",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "Drop Leg Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "Support Weapons Bag",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "TacSack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "Battle Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "Pivot Pads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "Field Protective Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Body Armor System",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Counterforce Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Modular Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Police SW Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Tactical 48h Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Tactical Assault Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Urban Warfare Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Svalinn Heavy Breather",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Khetaka Thorax",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Jaivardhan Thigh Rig",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Pridwen Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Aegis Knapsack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Ancile Rucksack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Duban Fitted Hauler",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Srivatsa War Grips",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Hulian Joint Braces",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Flax Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Royal Works"
+  },
+  {
+    "name": "Cushag Plate",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Royal Works"
+  },
+  {
+    "name": "Daffodil Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Royal Works"
+  },
+  {
+    "name": "Thistle Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Royal Works"
+  },
+  {
+    "name": "Lion Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Royal Works"
+  },
+  {
+    "name": "Rose Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Royal Works"
+  },
+  {
+    "name": "Machinist's Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Shiny Monkey Gear"
+  },
+  {
+    "name": "Service Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Shiny Monkey Gear"
+  },
+  {
+    "name": "Artisan Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Shiny Monkey Gear"
+  },
+  {
+    "name": "Artificer's Toolbox",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Shiny Monkey Gear"
+  },
+  {
+    "name": "Garage Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Shiny Monkey Gear"
+  },
+  {
+    "name": "Labored Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Shiny Monkey Gear"
+  },
+  {
+    "name": "Salvaged Special Operations Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Special Operations Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Escorter Combat Harness",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Lightweight Ballistic Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Vertical Y Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Rally Point Secure Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Micro Plated Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Nimble Knee Protectors",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Unfazed Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Unit Alloys"
+  },
+  {
+    "name": "Unbalanced Chestplate",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Unit Alloys"
+  },
+  {
+    "name": "Uncontested Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Unit Alloys"
+  },
+  {
+    "name": "Unmatched Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Unit Alloys"
+  },
+  {
+    "name": "Unburnable Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Unit Alloys"
+  },
+  {
+    "name": "Unequaled Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Unit Alloys"
+  },
+  {
+    "name": "Scout Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Urban Lookout"
+  },
+  {
+    "name": "Marked Chest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Urban Lookout"
+  },
+  {
+    "name": "Rough Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Urban Lookout"
+  },
+  {
+    "name": "Hills Backpack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Urban Lookout"
+  },
+  {
+    "name": "Mud Resistant Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Urban Lookout"
+  },
+  {
+    "name": "Trekking Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Urban Lookout"
+  },
+  {
+    "name": "Ilarion Filter",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Uzina Getica"
+  },
+  {
+    "name": "Parascheva Guard",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Uzina Getica"
+  },
+  {
+    "name": "Constantin Sheath",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Uzina Getica"
+  },
+  {
+    "name": "Gavriil Rucksack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Uzina Getica"
+  },
+  {
+    "name": "Theodora Grips",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Uzina Getica"
+  },
+  {
+    "name": "Dosoftei Braces",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Uzina Getica"
+  },
+  {
+    "name": "Breathe-Easy Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Walker, Harris & Co."
+  },
+  {
+    "name": "Ranger Ballistics Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Walker, Harris & Co."
+  },
+  {
+    "name": "Tactical Range Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Walker, Harris & Co."
+  },
+  {
+    "name": "Horizons Rucksack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Walker, Harris & Co."
+  },
+  {
+    "name": "Savanna Field Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Walker, Harris & Co."
+  },
+  {
+    "name": "Mesa Knee Guards",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Walker, Harris & Co."
+  },
+  {
+    "name": "\"Maxillam\" Respirator",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "\"Keel\" Belly Guard",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "\"Didactyl\" Pad Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "\"Talon\" Tactical Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "\"Pygostyle\" Sack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "\"Scapula\" Bug-out Bag",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "\"Trapezius\" Go-bag",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "\"Digits\" Finger Stabilizer",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "\"Patella\" Knee Cups",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "Cascades Mask",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Glacier Bay Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Ranier Vest",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Snoqualmie Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Garibaldi Pack",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Olympic Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Shasta Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Yukon Kneepads",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Burza Breather",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Mask",
+    "set": "Zwiadowka Sp. z o.o."
+  },
+  {
+    "name": "\"Zofia\" Armor System",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Chest",
+    "set": "Zwiadowka Sp. z o.o."
+  },
+  {
+    "name": "White-Tailed Holster",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Holster",
+    "set": "Zwiadowka Sp. z o.o."
+  },
+  {
+    "name": "Lowlands Carrier",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Backpack",
+    "set": "Zwiadowka Sp. z o.o."
+  },
+  {
+    "name": "Lucznik Gloves",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Gloves",
+    "set": "Zwiadowka Sp. z o.o."
+  },
+  {
+    "name": "Bizon Guards",
+    "kind": "gear",
+    "rarity": "brand",
+    "gearSlot": "Kneepads",
+    "set": "Zwiadowka Sp. z o.o."
+  },
+  {
+    "name": "Lyudmila Snipers Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Aces & Eights"
+  },
+  {
+    "name": "Tania Silent Vest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Aces & Eights"
+  },
+  {
+    "name": "Klavdiya Sidearm Holder",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Aces & Eights"
+  },
+  {
+    "name": "Ziba Low Profile Pack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Aces & Eights"
+  },
+  {
+    "name": "Roza Stable Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Aces & Eights"
+  },
+  {
+    "name": "Nina Prone Pads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Aces & Eights"
+  },
+  {
+    "name": "Aegis Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Aegis"
+  },
+  {
+    "name": "Aegis Chestplate",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Aegis"
+  },
+  {
+    "name": "Aegis Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Aegis"
+  },
+  {
+    "name": "Aegis Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Aegis"
+  },
+  {
+    "name": "Aegis Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Aegis"
+  },
+  {
+    "name": "Aegis Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Aegis"
+  },
+  {
+    "name": "Pathfinder's Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Breaking Point"
+  },
+  {
+    "name": "Forefront Armor",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Breaking Point"
+  },
+  {
+    "name": "Deadeye Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Breaking Point"
+  },
+  {
+    "name": "Pointer's Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Breaking Point"
+  },
+  {
+    "name": "Knifepoint Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Breaking Point"
+  },
+  {
+    "name": "Cavalier Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Cavalier"
+  },
+  {
+    "name": "Cavalier Chest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Cavalier"
+  },
+  {
+    "name": "Cavalier Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Cavalier"
+  },
+  {
+    "name": "Cavalier Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Cavalier"
+  },
+  {
+    "name": "Cavalier Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Cavalier"
+  },
+  {
+    "name": "Cavalier Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Cavalier"
+  },
+  {
+    "name": "Focused Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Concentrated Company"
+  },
+  {
+    "name": "Fastened Plate",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Concentrated Company"
+  },
+  {
+    "name": "Targeting Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Concentrated Company"
+  },
+  {
+    "name": "Directed Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Concentrated Company"
+  },
+  {
+    "name": "Pointer Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Concentrated Company"
+  },
+  {
+    "name": "Tracking Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Concentrated Company"
+  },
+  {
+    "name": "Training Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Core Strength"
+  },
+  {
+    "name": "Weighted Vest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Core Strength"
+  },
+  {
+    "name": "Marathon Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Core Strength"
+  },
+  {
+    "name": "Gym Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Core Strength"
+  },
+  {
+    "name": "Shadow Boxing Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Core Strength"
+  },
+  {
+    "name": "Leg Day Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Core Strength"
+  },
+  {
+    "name": "Biohazard Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Eclipse Protocol"
+  },
+  {
+    "name": "Sealed Chest Guard",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Eclipse Protocol"
+  },
+  {
+    "name": "PPE Adapter Thigh Rig Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Eclipse Protocol"
+  },
+  {
+    "name": "Containment Carryall Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Eclipse Protocol"
+  },
+  {
+    "name": "Medical Grade Tac-Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Eclipse Protocol"
+  },
+  {
+    "name": "Anti-Tear Joint Shielding Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Eclipse Protocol"
+  },
+  {
+    "name": "SCBA Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Ember Engine"
+  },
+  {
+    "name": "Blast-Resistant Plate",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Ember Engine"
+  },
+  {
+    "name": "Hot Hands Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Ember Engine"
+  },
+  {
+    "name": "Tank Carrier",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Ember Engine"
+  },
+  {
+    "name": "Fireproof Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Ember Engine"
+  },
+  {
+    "name": "Fireproof Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Ember Engine"
+  },
+  {
+    "name": "Heat Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Foundry Bulwark"
+  },
+  {
+    "name": "Forged Place Armor",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Foundry Bulwark"
+  },
+  {
+    "name": "Anvil Toolbelt Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Foundry Bulwark"
+  },
+  {
+    "name": "Shield Carrier Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Foundry Bulwark"
+  },
+  {
+    "name": "Crucible Gauntlets Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Foundry Bulwark"
+  },
+  {
+    "name": "Hammer Guards Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Foundry Bulwark"
+  },
+  {
+    "name": "Fog of War Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Future Initiative"
+  },
+  {
+    "name": "Terrapin Armored Rig Vest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Future Initiative"
+  },
+  {
+    "name": "Rush Tactics Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Future Initiative"
+  },
+  {
+    "name": "2k-RTS Radio Carrier Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Future Initiative"
+  },
+  {
+    "name": "APM Controller Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Future Initiative"
+  },
+  {
+    "name": "Bounding Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Future Initiative"
+  },
+  {
+    "name": "\"Rhodeswood\" AR Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Hard Wired"
+  },
+  {
+    "name": "\"Serpentine\" Array Vest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Hard Wired"
+  },
+  {
+    "name": "\"Ullswater\" Proxy Rig Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Hard Wired"
+  },
+  {
+    "name": "\"Abberton\" Dynamo Carrier Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Hard Wired"
+  },
+  {
+    "name": "\"Molesey\" ESD Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Hard Wired"
+  },
+  {
+    "name": "\"Strines\" Stabilizing Pads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Hard Wired"
+  },
+  {
+    "name": "Concealed Breath Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Heartbreaker"
+  },
+  {
+    "name": "Unflinching Vest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Heartbreaker"
+  },
+  {
+    "name": "Ever-Ready Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Heartbreaker"
+  },
+  {
+    "name": "Burdenless Pack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Heartbreaker"
+  },
+  {
+    "name": "Light Touch Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Heartbreaker"
+  },
+  {
+    "name": "Aggressor Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Heartbreaker"
+  },
+  {
+    "name": "Hotshot Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Hotshot"
+  },
+  {
+    "name": "Hotshot Vest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Hotshot"
+  },
+  {
+    "name": "Hotshot Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Hotshot"
+  },
+  {
+    "name": "Hotshot Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Hotshot"
+  },
+  {
+    "name": "Hotshot Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Hotshot"
+  },
+  {
+    "name": "Hotshot Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Hotshot"
+  },
+  {
+    "name": "Hunter's Muzzle",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Hunter's Fury"
+  },
+  {
+    "name": "Hunter's Cage",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Hunter's Fury"
+  },
+  {
+    "name": "Hunter's Quiver",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Hunter's Fury"
+  },
+  {
+    "name": "Hunter's Kit",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Hunter's Fury"
+  },
+  {
+    "name": "Hunter's Claws",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Hunter's Fury"
+  },
+  {
+    "name": "Hunter's Stride",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Hunter's Fury"
+  },
+  {
+    "name": "Final Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Measured Assembly"
+  },
+  {
+    "name": "Final Armor",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Measured Assembly"
+  },
+  {
+    "name": "Final Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Measured Assembly"
+  },
+  {
+    "name": "Measure Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Measured Assembly"
+  },
+  {
+    "name": "Measure Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Measured Assembly"
+  },
+  {
+    "name": "Measure Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Measured Assembly"
+  },
+  {
+    "name": "Snow Job Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Negotiator's Dilemma"
+  },
+  {
+    "name": "Highball Armor",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Negotiator's Dilemma"
+  },
+  {
+    "name": "Bogey Thigh Rig",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Negotiator's Dilemma"
+  },
+  {
+    "name": "Nibble Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Negotiator's Dilemma"
+  },
+  {
+    "name": "Mirror Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Negotiator's Dilemma"
+  },
+  {
+    "name": "Lowball Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Negotiator's Dilemma"
+  },
+  {
+    "name": "Gatherer's Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Ongoing Directive"
+  },
+  {
+    "name": "Resource Harness",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Ongoing Directive"
+  },
+  {
+    "name": "Special Ammo Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Ongoing Directive"
+  },
+  {
+    "name": "Loadout Frame",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Ongoing Directive"
+  },
+  {
+    "name": "CQB Fist Guards",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Ongoing Directive"
+  },
+  {
+    "name": "Knee Poleyn",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Ongoing Directive"
+  },
+  {
+    "name": "Exuro Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Ortiz: Exuro"
+  },
+  {
+    "name": "Exuro Chestplate",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Ortiz: Exuro"
+  },
+  {
+    "name": "Exuro Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Ortiz: Exuro"
+  },
+  {
+    "name": "Exuro Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Ortiz: Exuro"
+  },
+  {
+    "name": "Exuro Tactical Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Ortiz: Exuro"
+  },
+  {
+    "name": "Exuro Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Ortiz: Exuro"
+  },
+  {
+    "name": "Arc Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Ortiz: Reficere"
+  },
+  {
+    "name": "Tech Plate",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Ortiz: Reficere"
+  },
+  {
+    "name": "Thermoplastic Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Ortiz: Reficere"
+  },
+  {
+    "name": "Nanite Carrier",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Ortiz: Reficere"
+  },
+  {
+    "name": "Hot Work Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Ortiz: Reficere"
+  },
+  {
+    "name": "Workshop Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Ortiz: Reficere"
+  },
+  {
+    "name": "Reformed Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Refactor"
+  },
+  {
+    "name": "Reformed Vest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Refactor"
+  },
+  {
+    "name": "Revised Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Refactor"
+  },
+  {
+    "name": "Reorganized Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Refactor"
+  },
+  {
+    "name": "Reshuffled Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Refactor"
+  },
+  {
+    "name": "Remodeled Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Refactor"
+  },
+  {
+    "name": "Rigger Dust Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Rigger"
+  },
+  {
+    "name": "Rigger Quick Access Harness",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Rigger"
+  },
+  {
+    "name": "Rigger Utility Pouch",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Rigger"
+  },
+  {
+    "name": "Rigger Gear Bag",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Rigger"
+  },
+  {
+    "name": "Rigger Anti-Slip Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Rigger"
+  },
+  {
+    "name": "Rigger Collision Guards",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Rigger"
+  },
+  {
+    "name": "Striker's Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Striker's Battlegear"
+  },
+  {
+    "name": "Striker's Chest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Striker's Battlegear"
+  },
+  {
+    "name": "Striker's Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Striker's Battlegear"
+  },
+  {
+    "name": "Striker's Pack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Striker's Battlegear"
+  },
+  {
+    "name": "Striker's Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Striker's Battlegear"
+  },
+  {
+    "name": "Striker's Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Striker's Battlegear"
+  },
+  {
+    "name": "Blended Threat Armor",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "System Corruption"
+  },
+  {
+    "name": "Frame Injection Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "System Corruption"
+  },
+  {
+    "name": "Stack Overflow Container",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "System Corruption"
+  },
+  {
+    "name": "Haptic Bypass Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "System Corruption"
+  },
+  {
+    "name": "Zero Day Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "System Corruption"
+  },
+  {
+    "name": "Lilley Holster System",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Tip of the Spear"
+  },
+  {
+    "name": "Sustainable Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Tipping Scales"
+  },
+  {
+    "name": "Burst-resistant Plate",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Tipping Scales"
+  },
+  {
+    "name": "Doc Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Tipping Scales"
+  },
+  {
+    "name": "Endurance Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Tipping Scales"
+  },
+  {
+    "name": "Glued Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Tipping Scales"
+  },
+  {
+    "name": "Driven Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Tipping Scales"
+  },
+  {
+    "name": "Heft Grade A Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "True Patriot"
+  },
+  {
+    "name": "Appleton Body Armor",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "True Patriot"
+  },
+  {
+    "name": "Young Low-Friction Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "True Patriot"
+  },
+  {
+    "name": "Driver Excursion Pack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "True Patriot"
+  },
+  {
+    "name": "Ross Hand Protectors",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "True Patriot"
+  },
+  {
+    "name": "Sheridan Kneelers",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "True Patriot"
+  },
+  {
+    "name": "Umbra Initiative Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Umbra Initiative"
+  },
+  {
+    "name": "Umbra Initiative Vest",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Umbra Initiative"
+  },
+  {
+    "name": "Umbra Initiative Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Umbra Initiative"
+  },
+  {
+    "name": "Umbra Initiative Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Umbra Initiative"
+  },
+  {
+    "name": "Umbra Initiative Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Umbra Initiative"
+  },
+  {
+    "name": "Umbra Initiative Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Umbra Initiative"
+  },
+  {
+    "name": "Fermata Mask",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Mask",
+    "set": "Virtuoso"
+  },
+  {
+    "name": "Bravura Guard",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Chest",
+    "set": "Virtuoso"
+  },
+  {
+    "name": "Grave Holster",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Holster",
+    "set": "Virtuoso"
+  },
+  {
+    "name": "Medley Backpack",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Backpack",
+    "set": "Virtuoso"
+  },
+  {
+    "name": "Sharp Gloves",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Gloves",
+    "set": "Virtuoso"
+  },
+  {
+    "name": "Saltando Kneepads",
+    "kind": "gear",
+    "rarity": "gear-set",
+    "gearSlot": "Kneepads",
+    "set": "Virtuoso"
+  },
+  {
+    "name": "Punch Drunk",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Mask",
+    "set": "Douglas & Harding"
+  },
+  {
+    "name": "Nightwatcher",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Mask",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Chill Out",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Mask",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Visionario",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Mask",
+    "set": "Legatus S.p.A."
+  },
+  {
+    "name": "The Hollow Man",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Mask",
+    "set": "Yaahl Gear"
+  },
+  {
+    "name": "Henri",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Electrique"
+  },
+  {
+    "name": "Hunter-Killer",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Golan Gear Ltd"
+  },
+  {
+    "name": "Everyday Carrier",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Belstone Armory"
+  },
+  {
+    "name": "Chainkiller",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Walker, Harris & Co."
+  },
+  {
+    "name": "Pointman",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Gila Guard"
+  },
+  {
+    "name": "Vedmedytsya Vest",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "The Sacrifice",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Zero F's",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Ferocious Calm",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Fenris Group AB"
+  },
+  {
+    "name": "Door-Kicker's Knock",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Grupo Sombra S.A."
+  },
+  {
+    "name": "Caesar's Guard",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Empress International"
+  },
+  {
+    "name": "Closer",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Uzina Getica"
+  },
+  {
+    "name": "Cherished",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Habsburg Guard"
+  },
+  {
+    "name": "Carpenter",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Lengmo"
+  },
+  {
+    "name": "Bober",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Zwiadowka Sp. z o.o."
+  },
+  {
+    "name": "Pristine Example",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Sleight",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Urban Lookout"
+  },
+  {
+    "name": "Combustor",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Palisade Steelworks"
+  },
+  {
+    "name": "Equalizer",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Unit Alloys"
+  },
+  {
+    "name": "Impetus",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "Benefactor",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Edelweiss GPz"
+  },
+  {
+    "name": "Trick Shot",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Rushdown",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Robin",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Chest",
+    "set": "Royal Works"
+  },
+  {
+    "name": "Forge",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Holster",
+    "set": "Richter & Kaiser GmbH"
+  },
+  {
+    "name": "Ammo Dump",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Holster",
+    "set": "Badger Tuff"
+  },
+  {
+    "name": "Picaros Holster",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Holster",
+    "set": "Brazos de Arcabuz"
+  },
+  {
+    "name": "Spot-On",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Holster",
+    "set": "Urban Lookout"
+  },
+  {
+    "name": "Salvo",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Holster",
+    "set": "Unit Alloys"
+  },
+  {
+    "name": "Claws Out",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Holster",
+    "set": "Wyvern Wear"
+  },
+  {
+    "name": "Liquid Engineer",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Belstone Armory"
+  },
+  {
+    "name": "Hermano",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Brazos de Arcabuz"
+  },
+  {
+    "name": "The Courier",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Habsburg Guard"
+  },
+  {
+    "name": "Backbone",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Lengmo"
+  },
+  {
+    "name": "Anarchist's Cookbook",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Golan Gear Ltd"
+  },
+  {
+    "name": "Strategic Alignment",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "China Light Industries Corporation"
+  },
+  {
+    "name": "Lavoisier",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Electrique"
+  },
+  {
+    "name": "Matador",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Walker, Harris & Co."
+  },
+  {
+    "name": "The Gift",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Providence Defense"
+  },
+  {
+    "name": "Percussive Maintenance",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Vigil",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Legatus S.p.A."
+  },
+  {
+    "name": "Devil's Due",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Česká Výroba s.r.o."
+  },
+  {
+    "name": "Battery Pack",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Empress International"
+  },
+  {
+    "name": "The Setup",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Uzina Getica"
+  },
+  {
+    "name": "Force Multiplier",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Hana-U Corporation"
+  },
+  {
+    "name": "Proxy",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Palisade Steelworks"
+  },
+  {
+    "name": "Axel",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Shiny Monkey Gear"
+  },
+  {
+    "name": "Cap'n",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Festive Delivery",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Grupo Sombra S.A."
+  },
+  {
+    "name": "Momma Badger",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Edelweiss GPz"
+  },
+  {
+    "name": "Keeper",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "Melon Baller",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Airaldi Holdings"
+  },
+  {
+    "name": "Bulldog",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Backpack",
+    "set": "Royal Works"
+  },
+  {
+    "name": "Deathgrips",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Gloves",
+    "set": "5.11 Tactical"
+  },
+  {
+    "name": "Contractor's Gloves",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Gloves",
+    "set": "Petrov Defense Group"
+  },
+  {
+    "name": "Motherly Love",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Gloves",
+    "set": "Alps Summit Armament"
+  },
+  {
+    "name": "Eagles Grasp",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Gloves",
+    "set": "Zwiadowka Sp. z o.o."
+  },
+  {
+    "name": "Firm Handshake",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Gloves",
+    "set": "Sokolov Concern"
+  },
+  {
+    "name": "Fox's Prayer",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Kneepads",
+    "set": "Overlord Armaments"
+  },
+  {
+    "name": "Snow Machine",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Kneepads",
+    "set": "Electrique"
+  },
+  {
+    "name": "Turmoil",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Kneepads",
+    "set": "Česká Výroba s.r.o."
+  },
+  {
+    "name": "Emperor's Guard",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Kneepads",
+    "set": "Murakami Industries"
+  },
+  {
+    "name": "Grease",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Kneepads",
+    "set": "Shiny Monkey Gear"
+  },
+  {
+    "name": "Cloak",
+    "kind": "gear",
+    "rarity": "named",
+    "gearSlot": "Kneepads",
+    "set": "Imminence Armaments"
+  },
+  {
+    "name": "Coyote's Mask",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Mask"
+  },
+  {
+    "name": "Vile",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Mask"
+  },
+  {
+    "name": "Catharsis",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Mask"
+  },
+  {
+    "name": "Catalyst",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Mask"
+  },
+  {
+    "name": "Tinkerer",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Mask"
+  },
+  {
+    "name": "Investor",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Mask"
+  },
+  {
+    "name": "Tardigrade Armor System",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Chest"
+  },
+  {
+    "name": "Ridgeway's Pride",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Chest"
+  },
+  {
+    "name": "Collector",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Chest"
+  },
+  {
+    "name": "Provocator",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Chest"
+  },
+  {
+    "name": "Beacon",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Chest"
+  },
+  {
+    "name": "Iron Will",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Chest"
+  },
+  {
+    "name": "Dodge City Gunslinger's Holster",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Holster"
+  },
+  {
+    "name": "Imperial Dynasty",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Holster"
+  },
+  {
+    "name": "Waveform",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Holster"
+  },
+  {
+    "name": "Shocker Punch",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Holster"
+  },
+  {
+    "name": "Centurion's Scabbard",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Holster"
+  },
+  {
+    "name": "Nimble Holster",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Holster"
+  },
+  {
+    "name": "Acosta's Go-Bag",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Backpack"
+  },
+  {
+    "name": "Memento",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Backpack"
+  },
+  {
+    "name": "NinjaBike Messenger Bag",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Backpack"
+  },
+  {
+    "name": "Birdie's Quick Fix Pack",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Backpack"
+  },
+  {
+    "name": "Harrier Pride",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Backpack"
+  },
+  {
+    "name": "Sarru",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Backpack"
+  },
+  {
+    "name": "BTSU Datagloves",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Gloves"
+  },
+  {
+    "name": "Bloody Knuckles",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Gloves"
+  },
+  {
+    "name": "Rugged Gauntlets",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Gloves"
+  },
+  {
+    "name": "Overdogs",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Gloves"
+  },
+  {
+    "name": "Exodus Gloves",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Gloves"
+  },
+  {
+    "name": "Loaded for Bear",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Gloves"
+  },
+  {
+    "name": "Sawyer's Kneepads",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Kneepads"
+  },
+  {
+    "name": "NinjaBike Messenger Kneepads",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Kneepads"
+  },
+  {
+    "name": "Acosta's Kneepads",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Kneepads"
+  },
+  {
+    "name": "Blacklisters",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Kneepads"
+  },
+  {
+    "name": "Nurse's Kneepads",
+    "kind": "gear",
+    "rarity": "exotic",
+    "gearSlot": "Kneepads"
+  }
+]
