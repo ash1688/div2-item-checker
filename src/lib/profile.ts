@@ -41,10 +41,13 @@ export function setLibraryValues(values: Record<string, number>) {
   });
 }
 
-export function setLibraryTalents(names: string[]) {
+/** Unlock or lock specific talents, leaving the rest as they are. */
+export function setTalentsUnlocked(names: string[], unlocked: boolean) {
   db.transaction((tx) => {
-    tx.delete(libraryTalents).run();
-    for (const name of names) tx.insert(libraryTalents).values({ name }).run();
+    for (const name of names) {
+      if (unlocked) tx.insert(libraryTalents).values({ name }).onConflictDoNothing().run();
+      else tx.delete(libraryTalents).where(eq(libraryTalents.name, name)).run();
+    }
   });
 }
 

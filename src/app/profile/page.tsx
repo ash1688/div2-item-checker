@@ -1,24 +1,32 @@
-import { libraryAttributes, TALENTS, type TalentDef } from "@/lib/game";
+import Link from "next/link";
+import { LIBRARY_SCOPES, SCOPE_TITLE, scopeProgress } from "@/lib/library";
 import { getExpertiseLevel, getProfile } from "@/lib/profile";
 import {
   deleteExotic,
   deleteProficiency,
   saveExotic,
   saveExpertise,
-  saveLibrary,
   saveProficiency,
-  saveTalents,
 } from "./actions";
+import { MaxScopeButton } from "./MaxScopeButton";
 
 export const dynamic = "force-dynamic";
 
-const tierColour: Record<TalentDef["tier"], string> = {
-  S: "text-keep",
-  A: "text-library",
-  B: "text-expertise",
-  C: "text-muted",
-  D: "text-deconstruct",
-};
+function Progress({ label, done, total }: { label: string; done: number; total: number }) {
+  return (
+    <div className="text-sm">
+      <div className="flex justify-between text-muted">
+        <span>{label}</span>
+        <span className="tabular-nums">
+          {done}/{total}
+        </span>
+      </div>
+      <div className="mt-1 h-1.5 rounded bg-panel-2">
+        <div className="h-1.5 rounded bg-keep" style={{ width: `${total ? (done / total) * 100 : 0}%` }} />
+      </div>
+    </div>
+  );
+}
 
 function Section({ title, hint, children, open }: { title: string; hint?: string; children: React.ReactNode; open?: boolean }) {
   return (
@@ -33,13 +41,33 @@ function Section({ title, hint, children, open }: { title: string; hint?: string
 export default function ProfilePage() {
   const profile = getProfile();
   const level = getExpertiseLevel();
-  const libAttrs = libraryAttributes();
-  const unlocked = new Set(profile.libraryTalents);
   const proficiency = Object.entries(profile.proficiency).sort(([a], [b]) => a.localeCompare(b));
 
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl font-semibold">Profile</h1>
+
+      <section className="grid gap-3 sm:grid-cols-2" aria-label="Recalibration library">
+        {LIBRARY_SCOPES.map((scope) => {
+          const p = scopeProgress(scope, profile);
+          const all = p.attributesMaxed === p.attributesTotal && p.talentsUnlocked === p.talentsTotal;
+          return (
+            <div key={scope} className="card flex flex-col gap-3">
+              <Link href={`/profile/library/${scope}`} className="group flex flex-col gap-2">
+                <div className="flex items-center">
+                  <h2 className="font-semibold">{SCOPE_TITLE[scope]} library</h2>
+                  <span className="ml-auto text-muted group-hover:text-ink" aria-hidden>→</span>
+                </div>
+                <Progress label="Attributes maxed" done={p.attributesMaxed} total={p.attributesTotal} />
+                <Progress label="Talents unlocked" done={p.talentsUnlocked} total={p.talentsTotal} />
+              </Link>
+              <div className="self-start">
+                <MaxScopeButton scope={scope} title={SCOPE_TITLE[scope]} disabled={all} />
+              </div>
+            </div>
+          );
+        })}
+      </section>
 
       <Section title={`Expertise level: ${level}`} open>
         <form action={saveExpertise} className="flex gap-2">
@@ -89,68 +117,6 @@ export default function ProfilePage() {
         <form action={saveExotic} className="mt-3 flex gap-2">
           <input name="name" placeholder="Exotic name, e.g. Vile" className="flex-1" required />
           <button className="btn">Add</button>
-        </form>
-      </Section>
-
-      <Section
-        title="Library: attributes"
-        hint="Your current best value for each attribute in the recalibration library. Leave blank if you have none."
-      >
-        <form action={saveLibrary} className="flex flex-col gap-4">
-          {(["gear", "weapon"] as const).map((scope) => (
-            <fieldset key={scope}>
-              <legend className="mb-2 text-sm font-semibold uppercase text-muted">{scope}</legend>
-              <div className="grid gap-2 sm:grid-cols-2">
-                {libAttrs
-                  .filter((a) => a.scope === scope)
-                  .map(({ key, def }) => (
-                    <label key={key} className="flex items-center gap-2 text-sm">
-                      <span className="flex-1">
-                        {def.name}
-                        <span className="text-muted">
-                          {" "}
-                          (max {def.max.toLocaleString("en-GB")}
-                          {def.unit === "%" ? "%" : ""})
-                        </span>
-                      </span>
-                      <input
-                        name={key}
-                        inputMode="decimal"
-                        defaultValue={profile.libraryAttributes[key] ?? ""}
-                        className="w-24"
-                      />
-                    </label>
-                  ))}
-              </div>
-            </fieldset>
-          ))}
-          <button className="btn self-start">Save library</button>
-        </form>
-      </Section>
-
-      <Section
-        title={`Library: talents (${unlocked.size}/${TALENTS.length} unlocked)`}
-        hint="Tick the talents you've unlocked. Tier: S/A count towards Keep when not unlocked."
-      >
-        <form action={saveTalents} className="flex flex-col gap-4">
-          {(["weapon", "chest", "backpack"] as const).map((slot) => (
-            <fieldset key={slot}>
-              <legend className="mb-2 text-sm font-semibold uppercase text-muted">{slot}</legend>
-              <div className="grid gap-1 sm:grid-cols-2">
-                {TALENTS.filter((t) => t.slot === slot).map((t) => (
-                  <label key={t.name} className="flex items-center gap-2 text-sm">
-                    <input type="checkbox" name="talent" value={t.name} defaultChecked={unlocked.has(t.name)} />
-                    <span className={`w-4 font-bold ${tierColour[t.tier]}`}>{t.tier}</span>
-                    {t.name}
-                    {t.restriction !== "Any" && t.restriction !== "None" && (
-                      <span className="text-xs text-muted">({t.restriction})</span>
-                    )}
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-          ))}
-          <button className="btn self-start">Save talents</button>
         </form>
       </Section>
     </div>
