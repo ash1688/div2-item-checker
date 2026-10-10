@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cleanWords, fixDecimal, parseAttributeLine, parseTooltip, parseValue, voteValue } from "./parse";
+import { cleanWords, fixDecimal, fixModelNumber, parseAttributeLine, parseTooltip, parseValue, voteValue } from "./parse";
 
 describe("parseValue", () => {
   it("reads percentages, flat values and HP/s", () => {
@@ -147,5 +147,34 @@ describe("parseTooltip", () => {
       { name: "Damage to Armor", value: 11, uncertain: true },
     ]);
     expect(item.attributes).toEqual([{ name: "Rate of Fire", value: 4 }]);
+  });
+});
+
+describe("full-size Tinkering captures", () => {
+  it("turns misread letters back into digits in model numbers", () => {
+    expect(fixModelNumber("Mk1e")).toBe("Mk16");
+    expect(fixModelNumber("G36C")).toBe("G36C"); // a real letter suffix is left alone
+    expect(cleanWords("SOCOM Mk1e")).toBe("SOCOM Mk16");
+  });
+
+  it("replaces a garbled weapon core name with the only stat that class can have", () => {
+    const item = parseTooltip({
+      header: ["Fafnir"],
+      body: ["Core Attributes", "{+15.0%} Shotgun Damage", "{+11.0%} Ornn", "Attributes", "{+4.0%} Rate of Fire"],
+      isWeapon: true,
+      colourRarity: "exotic",
+    });
+    expect(item.core.map((a) => a.name)).toEqual(["Shotgun Damage", "Damage to Armor"]);
+    expect(item.core[1].value).toBe(11);
+  });
+
+  it("drops unrecognised junk rows instead of inventing a stat", () => {
+    const item = parseTooltip({
+      header: ["Vile"],
+      body: ["Attributes", "{+9.6%} Status Effects", "{+1} To TL"],
+      isWeapon: false,
+      colourRarity: "exotic",
+    });
+    expect(item.attributes.map((a) => a.name)).toEqual(["Status Effects"]);
   });
 });

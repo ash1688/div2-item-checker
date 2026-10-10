@@ -1,5 +1,6 @@
 import {
   type AttributeCategory,
+  attributesIn,
   editDistance,
   findAttribute,
   findTalent,
@@ -138,11 +139,21 @@ export function sectionOf(line: string): keyof typeof SECTION | null {
 }
 
 /** Keep the readable words of a noisy OCR line ("| yc iii Lexington 40" -> "Lexington"). */
+// Letters OCR confuses with digits once a model number has started ("Mk1e" -> "Mk16").
+const MODEL_DIGIT_FIXES: Record<string, string> = { e: "6", G: "6", b: "6", o: "0", O: "0", l: "1", I: "1", S: "5", B: "8", Z: "2" };
+
+/** In a model number like "Mk16", letters straight after the first digit are misread digits. */
+export function fixModelNumber(word: string): string {
+  return word.replace(/(\d)([A-Za-z]+)$/, (_, d: string, tail: string) =>
+    [...tail].every((ch) => MODEL_DIGIT_FIXES[ch]) ? d + [...tail].map((ch) => MODEL_DIGIT_FIXES[ch]).join("") : d + tail,
+  );
+}
+
 export function cleanWords(line: string): string {
   return line
     .split(/\s+/)
     // Digits after letters stay ("Mk16"); a lone number ("40") is stripped as leading junk.
-    .map((w) => w.replace(/^[^A-Za-z]+|[^A-Za-z0-9'’]+$/g, ""))
+    .map((w) => fixModelNumber(w.replace(/^[^A-Za-z]+|[^A-Za-z0-9'’]+$/g, "")))
     .filter((w) => w.length >= 2 && /^[A-Z]/.test(w) && w !== "LEVEL")
     .join(" ")
     .replace(/’/g, "'");
@@ -214,7 +225,11 @@ export function parseTooltip(t: TooltipText): ScannedItem {
   const weaponClass = kind === "weapon" && coreRows[0] ? weaponClassFromCore(coreRows[0].name) : undefined;
 
   const toAttribute = (r: (typeof rawRows)[number], category: AttributeCategory, appliesTo?: string): ItemAttribute => {
-    const def = findAttribute(category, r.name, appliesTo);
+    // A weapon's core stats are fixed by its class (e.g. shotgun: Shotgun Damage, then
+    // Damage to Armor), so a garbled core name ("Om") is replaced with the only option.
+    const only = appliesTo && category.startsWith("weapon-") ? attributesIn(category, appliesTo) : [];
+    const def = findAttribute(category, r.name, appliesTo) ?? (only.length === 1 ? only[0] : undefined);
+    if (def && def.name !== r.name && !findAttribute(category, r.name, appliesTo)) r = { ...r, name: def.name };
     const voted = voteValue(r.reads, category, r.name, appliesTo);
     // Nothing plausible was read: leave the value at 0 and flag it for the user.
     return {
@@ -232,7 +247,11 @@ export function parseTooltip(t: TooltipText): ScannedItem {
   );
   // Skill Tier only ever rolls +1.0, and its icon is easier to spot than its (often dim) row is to read.
   const core = kind === "gear" && t.skillTierIcon ? [{ name: "Skill Tier", value: 1 }] : readCore;
-  const attributes = minorRows.map((r) => toAttribute(r, kind === "gear" ? "gear-minor" : "weapon-minor"));
+  const minorCategory = kind === "gear" ? "gear-minor" : "weapon-minor";
+  const attributes = minorRows
+    // An unrecognised row with barely any letters ("To TL") is OCR junk, not a stat.
+    .filter((r) => findAttribute(minorCategory, r.name) || r.name.replace(/[^A-Za-z]/g, "").length >= 6)
+    .map((r) => toAttribute(r, minorCategory));
 
   const name = headerLines[0] ?? "";
   let rarity: Rarity;

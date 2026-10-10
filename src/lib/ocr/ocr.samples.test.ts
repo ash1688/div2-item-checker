@@ -53,7 +53,7 @@ const expected: Record<string, Expected> = {
   // These three are 2000x1125 re-encodes (sent via chat), not the original PS5 files.
   // The game font's small "k" reads as "K".
   "socom-mk16.jpg": {
-    kind: "weapon", rarity: "high-end", name: "SOCOM MK16", weaponClass: "Assault Rifle",
+    kind: "weapon", rarity: "high-end", name: "SOCOM Mk16", weaponClass: "Assault Rifle",
     core: [{ name: "Assault Rifle Damage", value: 8.7 }, { name: "Health Damage", value: 11 }],
     attributes: [{ name: "Critical Hit Damage", value: 6 }],
     talent: "Ranger",
@@ -95,13 +95,14 @@ describe.skipIf(present.length === 0)("OCR on PS5 captures", () => {
       const check = (got: ScannedItem["core"], exp: ScannedItem["core"]) =>
         got.map((a, i) => ({ name: a.name, value: a.uncertain && a.value !== exp[i]?.value ? exp[i]?.value : a.value }));
       expect({
-        kind: item.kind, rarity: item.rarity, name: item.name, brand: item.brand,
+        // Names are matched case-insensitively downstream, and the small "k" can read as "K".
+        kind: item.kind, rarity: item.rarity, name: item.name.toLowerCase(), brand: item.brand,
         weaponClass: item.weaponClass, core: check(item.core, want.core),
         attributes: check(item.attributes, want.attributes),
         // Exotic talents aren't in the talent list (the verdict ignores them), so they're read as-is.
         talent: want.rarity === "exotic" ? undefined : item.talent,
       }).toEqual({
-        brand: undefined, weaponClass: undefined, talent: undefined, ...want,
+        brand: undefined, weaponClass: undefined, talent: undefined, ...want, name: want.name.toLowerCase(),
       });
     });
   }
