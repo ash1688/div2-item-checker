@@ -3,9 +3,9 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { GEAR_SLOTS, RARITIES, WEAPON_CLASSES } from "@/lib/game";
-import { addExotic, applyLibraryGains, getProfile } from "@/lib/profile";
+import { applyLibraryGains, getProfile, keepItem, removeKeptItem } from "@/lib/profile";
 import { deleteScan, getScan, saveJudgement } from "@/lib/scans";
-import { judge } from "@/lib/verdict";
+import { judge, keptKey } from "@/lib/verdict";
 
 const attr = z.object({ name: z.string().trim().min(1), value: z.number().finite() });
 const itemSchema = z.object({
@@ -29,7 +29,7 @@ export async function judgeScan(id: number, raw: unknown): Promise<string | null
     talent: parsed.data.talent || undefined,
     brand: parsed.data.brand || undefined,
   };
-  saveJudgement(id, item, judge(item, getProfile()));
+  saveJudgement(id, item, judge(item, getProfile(id)));
   revalidatePath(`/scans/${id}`);
   return null;
 }
@@ -39,15 +39,26 @@ export async function markExtracted(id: number) {
   const scan = getScan(id);
   if (!scan?.item || !scan.verdict) return;
   applyLibraryGains(scan.item.kind, scan.verdict.libraryGains);
-  saveJudgement(id, scan.item, judge(scan.item, getProfile()));
+  saveJudgement(id, scan.item, judge(scan.item, getProfile(id)));
   revalidatePath(`/scans/${id}`);
 }
 
-export async function markExoticOwned(id: number) {
+/** "I'm keeping this": remember this copy's stats so later duplicates are compared to it. */
+export async function keepScan(id: number) {
   const scan = getScan(id);
   if (!scan?.item) return;
-  addExotic(scan.item.name);
+  keepItem(scan.item, id);
+  saveJudgement(id, scan.item, judge(scan.item, getProfile(id)));
   revalidatePath(`/scans/${id}`);
+  revalidatePath("/profile");
+}
+
+export async function stopKeeping(id: number) {
+  const scan = getScan(id);
+  if (!scan?.item) return;
+  removeKeptItem(keptKey(scan.item.name));
+  revalidatePath(`/scans/${id}`);
+  revalidatePath("/profile");
 }
 
 export async function removeScan(id: number) {

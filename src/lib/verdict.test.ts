@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { type Profile, type ScannedItem, judge } from "@/lib/verdict";
+import { keptKey, type Profile, rollQuality, type ScannedItem, judge } from "@/lib/verdict";
 
 const emptyProfile: Profile = {
   libraryAttributes: {},
@@ -174,5 +174,50 @@ describe("judge: library and expertise", () => {
     );
     expect(v.warnings).toEqual([]);
     expect(v.action).toBe("keep");
+  });
+});
+
+describe("judge: duplicates of an item you're keeping", () => {
+  const stElmos = (arDamage: number): ScannedItem => ({
+    kind: "weapon", rarity: "exotic", name: "St. Elmo's Engine", weaponClass: "Assault Rifle",
+    core: [{ name: "Assault Rifle Damage", value: arDamage }, { name: "Health Damage", value: 21 }],
+    attributes: [{ name: "Critical Hit Chance", value: 9.5 }],
+  });
+  const keeping = (item: ScannedItem): Profile => ({
+    ...emptyProfile,
+    exoticsOwned: [item.name],
+    keptItems: { [keptKey(item.name)]: item },
+  });
+
+  it("keeps a better copy and says to junk the old one", () => {
+    const v = judge(stElmos(15), keeping(stElmos(7.5)));
+    expect(v.action).toBe("keep");
+    expect(v.reasons[0]).toMatch(/junk the old copy/);
+  });
+
+  it("doesn't keep a worse copy of an exotic", () => {
+    const v = judge(stElmos(7.5), keeping(stElmos(15)));
+    expect(v.action).toBe("expertise");
+    expect(v.notes.join()).toMatch(/you're keeping is as good or better/);
+  });
+
+  it("doesn't keep an equal copy", () => {
+    expect(judge(stElmos(15), keeping(stElmos(15))).action).not.toBe("keep");
+  });
+
+  it("stops a god roll being kept when the kept copy is better", () => {
+    const godRoll = samples.lexington;
+    const v = judge(godRoll, keeping({ ...godRoll, attributes: [{ name: "DMG to target out of cover", value: 10 }] }));
+    expect(v.action).not.toBe("keep");
+  });
+
+  it("stops an S-tier talent being kept twice", () => {
+    const worse = { ...samples.socom, core: [{ name: "Assault Rifle Damage", value: 5 }, samples.socom.core[1]] };
+    expect(judge(worse, keeping(samples.socom)).action).toBe("library");
+  });
+
+  it("measures copies by average roll", () => {
+    expect(rollQuality(stElmos(15))).toBeCloseTo((1 + 1 + 1) / 3);
+    expect(rollQuality(stElmos(7.5))).toBeCloseTo((0.5 + 1 + 1) / 3);
   });
 });

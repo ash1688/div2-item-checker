@@ -8,7 +8,7 @@ import { db } from "@/db";
 import { UPLOAD_DIR } from "@/lib/paths";
 import { scans } from "@/db/schema";
 import { readItemScreenshot } from "@/lib/ocr/ocr";
-import { getProfile } from "@/lib/profile";
+import { getKeptItems, getProfile } from "@/lib/profile";
 import { judge, type ScannedItem, type Verdict } from "@/lib/verdict";
 
 export interface Scan {
@@ -59,13 +59,29 @@ export async function createScan(file: File): Promise<number> {
   return row.id;
 }
 
+/**
+ * Verdicts are recalculated against the current profile whenever scans are shown,
+ * so keeping an item or updating the library updates every earlier scan too.
+ * A scan's own kept copy is left out, or it would be compared against itself.
+ */
+function withLiveVerdicts(list: Scan[]): Scan[] {
+  if (!list.some((s) => s.item)) return list;
+  const profile = getProfile();
+  const kept = getKeptItems();
+  return list.map((s) => {
+    if (!s.item) return s;
+    const keptItems = Object.fromEntries(kept.filter((k) => k.scanId !== s.id).map((k) => [k.key, k.item]));
+    return { ...s, verdict: judge(s.item, { ...profile, keptItems }) };
+  });
+}
+
 export function getScan(id: number): Scan | undefined {
   const row = db.select().from(scans).where(eq(scans.id, id)).get();
-  return row && toScan(row);
+  return row && withLiveVerdicts([toScan(row)])[0];
 }
 
 export function listScans(): Scan[] {
-  return db.select().from(scans).orderBy(desc(scans.id)).all().map(toScan);
+  return withLiveVerdicts(db.select().from(scans).orderBy(desc(scans.id)).all().map(toScan));
 }
 
 export function saveJudgement(id: number, item: ScannedItem, verdict: Verdict) {
@@ -89,7 +105,7 @@ export async function analyseScan(id: number) {
       .set({
         ocrText: JSON.stringify(text),
         item: JSON.stringify(item),
-        verdict: JSON.stringify(judge(item, getProfile())),
+        verdict: JSON.stringify(judge(item, getProfile(id))),
         status: unsure ? "needs-review" : "done",
         error: null,
       })

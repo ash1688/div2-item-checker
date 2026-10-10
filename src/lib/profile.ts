@@ -1,11 +1,15 @@
 import "server-only";
 import { eq } from "drizzle-orm";
 import { db } from "@/db";
-import { exoticsOwned, libraryAttributes, libraryTalents, proficiency, settings } from "@/db/schema";
-import type { LibraryGain, Profile } from "@/lib/verdict";
+import { exoticsOwned, keptItems, libraryAttributes, libraryTalents, proficiency, settings } from "@/db/schema";
+import { keptKey, type LibraryGain, type Profile, type ScannedItem } from "@/lib/verdict";
 import { libraryKey, findAttribute } from "@/lib/game";
 
-export function getProfile(): Profile {
+/**
+ * The user's profile. When judging a scan, pass its id: a kept copy that came from
+ * that same scan is left out, or the item would be compared against itself.
+ */
+export function getProfile(forScanId?: number): Profile {
   return {
     libraryAttributes: Object.fromEntries(
       db.select().from(libraryAttributes).all().map((r) => [r.key, r.value]),
@@ -13,7 +17,40 @@ export function getProfile(): Profile {
     libraryTalents: db.select().from(libraryTalents).all().map((r) => r.name),
     proficiency: Object.fromEntries(db.select().from(proficiency).all().map((r) => [r.type, r.rank])),
     exoticsOwned: db.select().from(exoticsOwned).all().map((r) => r.name),
+    keptItems: Object.fromEntries(
+      getKeptItems()
+        .filter((k) => forScanId === undefined || k.scanId !== forScanId)
+        .map((k) => [k.key, k.item]),
+    ),
   };
+}
+
+export interface KeptItem {
+  key: string;
+  item: ScannedItem;
+  scanId: number | null;
+  keptAt: Date;
+}
+
+export function getKeptItems(): KeptItem[] {
+  return db
+    .select()
+    .from(keptItems)
+    .all()
+    .map((r) => ({ ...r, item: JSON.parse(r.item) as ScannedItem }));
+}
+
+/** Keep this copy of the item (replacing any earlier kept copy). Exotics also count as owned. */
+export function keepItem(item: ScannedItem, scanId: number | null) {
+  const row = { key: keptKey(item.name), item: JSON.stringify(item), scanId, keptAt: new Date() };
+  db.transaction((tx) => {
+    tx.insert(keptItems).values(row).onConflictDoUpdate({ target: keptItems.key, set: row }).run();
+    if (item.rarity === "exotic") tx.insert(exoticsOwned).values({ name: item.name }).onConflictDoNothing().run();
+  });
+}
+
+export function removeKeptItem(key: string) {
+  db.delete(keptItems).where(eq(keptItems.key, key)).run();
 }
 
 export function getExpertiseLevel(): number {

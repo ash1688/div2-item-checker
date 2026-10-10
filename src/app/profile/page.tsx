@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { LIBRARY_SCOPES, SCOPE_TITLE, scopeProgress } from "@/lib/library";
-import { getExpertiseLevel, getProfile } from "@/lib/profile";
+import { getExpertiseLevel, getKeptItems, getProfile } from "@/lib/profile";
+import { rollQuality } from "@/lib/verdict";
 import {
   deleteExotic,
+  deleteKeptItem,
   deleteProficiency,
   saveExotic,
   saveExpertise,
@@ -40,6 +42,7 @@ function Section({ title, hint, children, open }: { title: string; hint?: string
 
 export default function ProfilePage() {
   const profile = getProfile();
+  const kept = getKeptItems().sort((a, b) => a.item.name.localeCompare(b.item.name));
   const level = getExpertiseLevel();
   const proficiency = Object.entries(profile.proficiency).sort(([a], [b]) => a.localeCompare(b));
 
@@ -101,6 +104,40 @@ export default function ProfilePage() {
           <input type="number" name="rank" min={0} max={10} defaultValue={10} className="w-16" />
           <button className="btn">Add</button>
         </form>
+      </Section>
+
+      <Section
+        title={`Kept items (${kept.length})`}
+        hint="The copy of each item you're keeping. A new copy is only kept if it rolls better on average; then you junk the old one."
+      >
+        {kept.length === 0 && <p className="text-sm text-muted">Nothing yet. Use "I'm keeping this" on a scan.</p>}
+        <ul className="flex flex-col divide-y divide-line">
+          {kept.map((k) => {
+            const q = rollQuality(k.item);
+            return (
+              <li key={k.key} className="flex items-center gap-3 py-2 text-sm">
+                <div className="min-w-0 flex-1">
+                  {k.scanId ? (
+                    <Link href={`/scans/${k.scanId}`} className="font-medium hover:underline">
+                      {k.item.name}
+                    </Link>
+                  ) : (
+                    <span className="font-medium">{k.item.name}</span>
+                  )}
+                  <span className="block truncate text-xs text-muted">
+                    {[...k.item.core, ...k.item.attributes].map((a) => `${a.name} ${a.value.toLocaleString("en-GB")}`).join(" · ")}
+                  </span>
+                </div>
+                <span className="tabular-nums text-muted" title="Average roll">
+                  {q === null ? "?" : `${Math.round(q * 100)}%`}
+                </span>
+                <form action={deleteKeptItem.bind(null, k.key)}>
+                  <button className="px-2 text-muted" aria-label={`Stop keeping ${k.item.name}`}>✕</button>
+                </form>
+              </li>
+            );
+          })}
+        </ul>
       </Section>
 
       <Section title={`Exotics owned (${profile.exoticsOwned.length})`} hint="A first copy of an exotic is always kept.">

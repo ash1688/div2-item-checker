@@ -2,9 +2,10 @@ import { notFound } from "next/navigation";
 import { VerdictBadge } from "@/components/VerdictBadge";
 import { ATTRIBUTES, TALENTS, type AttributeCategory } from "@/lib/game";
 import { ITEMS } from "@/lib/items";
-import { getProfile } from "@/lib/profile";
+import { getKeptItems } from "@/lib/profile";
+import { keptKey } from "@/lib/verdict";
 import { getScan } from "@/lib/scans";
-import { markExoticOwned, markExtracted, removeScan } from "./actions";
+import { keepScan, markExtracted, removeScan, stopKeeping } from "./actions";
 import { ReviewForm } from "./ReviewForm";
 
 export const dynamic = "force-dynamic";
@@ -18,8 +19,10 @@ export default async function ScanPage({ params }: { params: Promise<{ id: strin
   const scan = getScan(id);
   if (!scan) notFound();
   const v = scan.verdict;
-  const ownsExotic =
-    scan.item?.rarity === "exotic" && getProfile().exoticsOwned.includes(scan.item.name);
+  // Is a copy of this item being kept, and is it this scan?
+  const kept = scan.item ? getKeptItems().find((k) => k.key === keptKey(scan.item!.name)) : undefined;
+  const keptHere = kept?.scanId === id;
+  const keptElsewhere = kept !== undefined && !keptHere;
 
   const unsure = scan.item && [...scan.item.core, ...scan.item.attributes].some((a) => a.uncertain);
 
@@ -91,9 +94,17 @@ export default async function ScanPage({ params }: { params: Promise<{ id: strin
                 <button className="btn btn-ghost text-sm">I extracted it: update my library</button>
               </form>
             )}
-            {scan.item?.rarity === "exotic" && !ownsExotic && (
-              <form action={markExoticOwned.bind(null, id)}>
-                <button className="btn btn-ghost text-sm">I kept it: mark exotic as owned</button>
+            {scan.item && keptHere && (
+              <form action={stopKeeping.bind(null, id)} className="flex items-center gap-2 text-sm">
+                <span className="font-semibold text-keep">✓ You&apos;re keeping this copy</span>
+                <button className="text-muted underline">Undo</button>
+              </form>
+            )}
+            {scan.item && !keptHere && (
+              <form action={keepScan.bind(null, id)}>
+                <button className={`btn text-sm ${v.action === "keep" ? "" : "btn-ghost"}`}>
+                  {keptElsewhere ? "Keep this one instead" : "I'm keeping this"}
+                </button>
               </form>
             )}
           </div>

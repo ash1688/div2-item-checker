@@ -49,6 +49,8 @@ export interface Profile {
   proficiency: Record<string, number>;
   /** Exotic names the user already has a copy of. */
   exoticsOwned: string[];
+  /** keptKey(name) -> the copy of that item the user is keeping, for comparing duplicates. */
+  keptItems?: Record<string, ScannedItem>;
 }
 
 export type Action = "keep" | "library" | "expertise" | "deconstruct" | "unsupported";
@@ -78,6 +80,21 @@ export interface Verdict {
   libraryGains: LibraryGain[];
   proficiencyType: string;
   warnings: string[];
+}
+
+/** Key for kept items: one kept copy per item name ("SOCOM Mk16" and "SOCOM Mk17" stay apart). */
+export function keptKey(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function averagePct(rolls: Roll[]): number | null {
+  const scored = rolls.filter((r) => r.pct !== null && !r.perfect);
+  return scored.length ? scored.reduce((s, r) => s + Math.min(r.pct!, 1), 0) / scored.length : null;
+}
+
+/** Average of each stat's roll as a share of its max: how two copies of an item are compared. */
+export function rollQuality(item: ScannedItem): number | null {
+  return averagePct(resolve(item));
 }
 
 interface ResolvedAttribute extends Roll {
@@ -209,8 +226,31 @@ export function judge(item: ScannedItem, profile: Profile): Verdict {
       ? `${type} isn't in your proficiency list, so it's assumed below rank ${MAX_PROFICIENCY_RANK}.`
       : `${type} is proficiency rank ${rank}/${MAX_PROFICIENCY_RANK}.`;
 
+  // A copy of this item is already being kept: only keep this one if it rolled better.
+  const kept = profile.keptItems?.[keptKey(item.name)];
+  if (kept) {
+    const mine = averagePct(scored);
+    const theirs = rollQuality(kept);
+    const pctOf = (n: number | null) => (n === null ? "?" : `${Math.round(n * 100)}%`);
+    if (mine !== null && theirs !== null && mine > theirs + 0.005) {
+      return {
+        ...base,
+        action: "keep",
+        reasons: [
+          `Better than the ${item.name} you're keeping (average roll ${pctOf(mine)} vs ${pctOf(theirs)}): keep this one and junk the old copy.`,
+        ],
+        libraryGains: isExotic ? [] : libraryGains,
+      };
+    }
+    notes.push(
+      mine === null || theirs === null
+        ? `You're already keeping a ${item.name}; couldn't compare the rolls, so this copy isn't kept.`
+        : `The ${item.name} you're keeping is as good or better (average roll ${pctOf(theirs)} vs ${pctOf(mine)}).`,
+    );
+  }
+
   if (isExotic) {
-    if (!ownsExotic(profile, item.name)) {
+    if (!kept && !ownsExotic(profile, item.name)) {
       return {
         ...base,
         action: "keep",
@@ -218,7 +258,7 @@ export function judge(item: ScannedItem, profile: Profile): Verdict {
         libraryGains: [],
       };
     }
-    if (godRoll) notes.push(`This copy is a god roll (${rollSummary}); swap it with yours if it's better.`);
+    if (godRoll && !kept) notes.push(`This copy is a god roll (${rollSummary}); swap it with yours if it's better.`);
     if (needsProficiency) {
       return {
         ...base,
@@ -235,7 +275,7 @@ export function judge(item: ScannedItem, profile: Profile): Verdict {
     };
   }
 
-  if (godRoll) {
+  if (godRoll && !kept) {
     return {
       ...base,
       action: "keep",
@@ -244,7 +284,7 @@ export function judge(item: ScannedItem, profile: Profile): Verdict {
     };
   }
 
-  if (talentDef && (talentDef.tier === "S" || talentDef.tier === "A") && !hasTalent(profile, talentDef)) {
+  if (!kept && talentDef && (talentDef.tier === "S" || talentDef.tier === "A") && !hasTalent(profile, talentDef)) {
     return {
       ...base,
       action: "keep",

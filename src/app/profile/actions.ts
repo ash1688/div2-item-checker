@@ -3,6 +3,7 @@ import { revalidatePath } from "next/cache";
 import {
   addExotic,
   removeExotic,
+  removeKeptItem,
   removeProficiency,
   setExpertiseLevel,
   setProficiency,
@@ -35,5 +36,10 @@ export async function saveExotic(form: FormData) {
 
 export async function deleteExotic(name: string) {
   removeExotic(name);
+  revalidatePath("/profile");
+}
+
+export async function deleteKeptItem(key: string) {
+  removeKeptItem(key);
   revalidatePath("/profile");
 }

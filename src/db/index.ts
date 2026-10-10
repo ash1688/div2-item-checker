@@ -15,6 +15,20 @@ function open() {
   return db;
 }
 
-// Reuse one connection across hot reloads in dev.
-const g = globalThis as unknown as { __db?: ReturnType<typeof open> };
-export const db = (g.__db ??= open());
+type Db = ReturnType<typeof open>;
+
+// One connection, reused across hot reloads in dev.
+const g = globalThis as unknown as { __db?: Db };
+
+/**
+ * Opened on first use, not on import: `next build` loads every page module in
+ * parallel workers, and opening (and migrating) the database there made the
+ * workers race to create the same tables.
+ */
+export const db = new Proxy({} as Db, {
+  get(_target, prop) {
+    g.__db ??= open();
+    const value = Reflect.get(g.__db, prop);
+    return typeof value === "function" ? value.bind(g.__db) : value;
+  },
+});

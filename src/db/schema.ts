@@ -39,3 +39,13 @@ export const scans = sqliteTable("scans", {
   status: text("status", { enum: ["pending", "needs-review", "done", "failed"] }).notNull(),
   error: text("error"),
 });
+
+/** The copy of each item the user is keeping, with its stats, so duplicates can be compared. */
+export const keptItems = sqliteTable("kept_items", {
+  /** keptKey(item name): lowercase letters and digits. */
+  key: text("key").primaryKey(),
+  /** JSON ScannedItem. */
+  item: text("item").notNull(),
+  scanId: integer("scan_id"),
+  keptAt: integer("kept_at", { mode: "timestamp" }).notNull(),
+});
