@@ -64,9 +64,21 @@ export function groupForItem(item: Pick<ScannedItem, "kind" | "weaponClass" | "g
 /** Stored key for an attribute or talent in a group: "gear:Holster:Critical Hit Chance". */
 export const entryKey = (group: LibraryGroup, name: string) => `${group.key}:${name}`;
 
-/** Which attribute categories a group's library holds (weapon cores can't be recalibrated). */
+const WEAPON_CORE: AttributeCategory[] = ["weapon-core", "weapon-secondary"];
+
+/**
+ * Stored key for an attribute. Weapon cores get their own "core:" key because several
+ * share a name with a normal weapon attribute but have a different max (a rifle's core
+ * Critical Hit Damage goes to 17%, the attribute to 10%).
+ */
+export const attributeKey = (group: LibraryGroup, def: { name: string; category: AttributeCategory }) =>
+  WEAPON_CORE.includes(def.category) ? `${group.key}:core:${def.name}` : entryKey(group, def.name);
+
+/** Which attribute categories a group's library holds. */
 export function libraryCategory(category: AttributeCategory, kind: "weapon" | "gear"): boolean {
-  return kind === "gear" ? category === "gear-core" || category === "gear-minor" : category === "weapon-minor";
+  return kind === "gear"
+    ? category === "gear-core" || category === "gear-minor"
+    : category === "weapon-minor" || WEAPON_CORE.includes(category);
 }
 
 const RESTRICTION_CLASSES: Record<string, WeaponClass> = {
@@ -110,9 +122,14 @@ export type LibrarySection =
   | { id: string; title: string; kind: "attributes"; attributes: LibraryAttribute[] }
   | { id: string; title: string; kind: "talents"; talents: LibraryTalent[] };
 
-function attrs(group: LibraryGroup, category: AttributeCategory): LibraryAttribute[] {
-  return ATTRIBUTES.filter((a) => a.category === category).map((a) => ({
-    key: entryKey(group, a.name),
+function attrs(group: LibraryGroup, ...categories: AttributeCategory[]): LibraryAttribute[] {
+  // Weapon cores only apply to their own class (rifles: Rifle Damage + Critical Hit Damage).
+  return ATTRIBUTES.filter(
+    (a) =>
+      categories.includes(a.category) &&
+      (!WEAPON_CORE.includes(a.category) || a.appliesTo.includes(group.weaponClass ?? "")),
+  ).map((a) => ({
+    key: attributeKey(group, a),
     name: a.name,
     max: a.max,
     unit: a.unit,
@@ -128,7 +145,15 @@ export function librarySections(group: LibraryGroup): LibrarySection[] {
           { id: "core", title: "Core attributes", kind: "attributes", attributes: attrs(group, "gear-core") },
           { id: "attributes", title: "Attributes", kind: "attributes", attributes: attrs(group, "gear-minor") },
         ]
-      : [{ id: "attributes", title: "Attributes", kind: "attributes", attributes: attrs(group, "weapon-minor") }];
+      : [
+          {
+            id: "core",
+            title: "Core attributes",
+            kind: "attributes",
+            attributes: attrs(group, "weapon-core", "weapon-secondary"),
+          },
+          { id: "attributes", title: "Attributes", kind: "attributes", attributes: attrs(group, "weapon-minor") },
+        ];
   if (talents.length) sections.push({ id: "talents", title: "Talents", kind: "talents", talents });
   return sections;
 }

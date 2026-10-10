@@ -29,10 +29,34 @@ describe("library groups", () => {
     expect(groupTalents(groupById("holsters")!)).toEqual([]);
   });
 
-  it("gives gear core and attribute sections, weapons attributes only (cores can't be recalibrated)", () => {
+  it("gives gear and weapons core and attribute sections", () => {
     expect(librarySections(groupById("holsters")!).map((s) => s.id)).toEqual(["core", "attributes"]);
-    expect(librarySections(groupById("rifles")!).map((s) => s.id)).toEqual(["attributes", "talents"]);
+    expect(librarySections(groupById("rifles")!).map((s) => s.id)).toEqual(["core", "attributes", "talents"]);
     const holster = librarySections(groupById("holsters")!).find((s) => s.id === "attributes");
     expect(holster?.kind === "attributes" && holster.attributes.length).toBe(12);
+  });
+
+
+  it.each([
+    ["rifles", ["Rifle Damage", "Critical Hit Damage"]],
+    ["assault-rifles", ["Assault Rifle Damage", "Health Damage"]],
+    ["marksman-rifles", ["Marksman Rifle Damage", "Headshot Damage"]],
+    ["shotguns", ["Shotgun Damage", "Damage to Armor"]],
+    ["smgs", ["SMG Damage", "Critical Hit Chance"]],
+    ["lmgs", ["LMG Damage", "Damage to Targets Out of Cover"]],
+    ["pistols", ["Pistol Damage"]],
+  ])("%s core attributes: %j", (id, names) => {
+    const core = librarySections(groupById(id)!).find((s) => s.id === "core");
+    expect(core?.kind === "attributes" && core.attributes.map((a) => a.name)).toEqual(names);
+  });
+
+  it("keeps a weapon core apart from the attribute with the same name", () => {
+    const rifles = librarySections(groupById("rifles")!);
+    const core = rifles.find((s) => s.id === "core");
+    const attrs = rifles.find((s) => s.id === "attributes");
+    const coreChd = core?.kind === "attributes" ? core.attributes.find((a) => a.name === "Critical Hit Damage") : undefined;
+    const attrChd = attrs?.kind === "attributes" ? attrs.attributes.find((a) => a.name === "Critical Hit Damage") : undefined;
+    expect(coreChd).toMatchObject({ key: "weapon:Rifle:core:Critical Hit Damage", max: 17 });
+    expect(attrChd).toMatchObject({ key: "weapon:Rifle:Critical Hit Damage", max: 10 });
   });
 });

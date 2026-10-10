@@ -112,11 +112,11 @@ export function applyLibraryGains(item: ScannedItem, gains: LibraryGain[]) {
   db.transaction((tx) => {
     for (const g of gains) {
       if (g.kind === "talent") {
-        tx.insert(libraryTalents).values({ name: entryKey(group, g.name) }).onConflictDoNothing().run();
+        tx.insert(libraryTalents).values({ name: g.key ?? entryKey(group, g.name) }).onConflictDoNothing().run();
         continue;
       }
       if (g.value === undefined) continue;
-      const key = entryKey(group, g.name);
+      const key = g.key ?? entryKey(group, g.name);
       tx.insert(libraryAttributes).values({ key, value: g.value })
         .onConflictDoUpdate({ target: libraryAttributes.key, set: { value: g.value } }).run();
     }

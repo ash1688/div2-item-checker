@@ -144,7 +144,9 @@ describe("judge: library and expertise", () => {
       libraryAttributes: { "gear:Holster:Weapon Damage": 15, "gear:Holster:Armor Regen": 3000, "gear:Holster:Skill Haste": 12 },
     });
     expect(v.action).toBe("library");
-    expect(v.libraryGains).toEqual([{ kind: "attribute", name: "Armor Regen", value: 3445, current: 3000 }]);
+    expect(v.libraryGains).toEqual([
+      { kind: "attribute", name: "Armor Regen", value: 3445, current: 3000, key: "gear:Holster:Armor Regen" },
+    ]);
   });
 
   it("uses the brand or gear set as the proficiency type for gear", () => {
@@ -240,5 +242,22 @@ describe("judge: the library is per weapon class and gear slot", () => {
     const v = judge({ ...samples.holster, gearSlot: undefined }, emptyProfile);
     expect(v.libraryGains).toEqual([]);
     expect(v.warnings.join()).toMatch(/Gear slot unknown/);
+  });
+});
+
+describe("judge: weapon core attributes in the library", () => {
+  it("compares a rifle's core Critical Hit Damage with the core slot, not the attribute", () => {
+    const rifle: ScannedItem = {
+      kind: "weapon", rarity: "high-end", name: "M1A", weaponClass: "Rifle",
+      core: [{ name: "Rifle Damage", value: 15 }, { name: "Critical Hit Damage", value: 17 }],
+      attributes: [{ name: "Critical Hit Damage", value: 10 }],
+    };
+    const v = judge(rifle, {
+      ...emptyProfile,
+      libraryAttributes: { "weapon:Rifle:core:Rifle Damage": 15, "weapon:Rifle:Critical Hit Damage": 10 },
+    });
+    expect(v.libraryGains).toEqual([
+      { kind: "attribute", name: "Critical Hit Damage", value: 17, current: 0, key: "weapon:Rifle:core:Critical Hit Damage" },
+    ]);
   });
 });

@@ -9,7 +9,7 @@ import {
   findTalent,
   normalizeName,
 } from "@/lib/game";
-import { entryKey, groupForItem, libraryCategory, type LibraryGroup } from "@/lib/library";
+import { attributeKey, entryKey, groupForItem, libraryCategory, type LibraryGroup } from "@/lib/library";
 
 export const GOD_ROLL_THRESHOLD = 0.95;
 export const MAX_PROFICIENCY_RANK = 10;
@@ -66,6 +66,8 @@ export interface Roll {
 export interface LibraryGain {
   kind: "attribute" | "talent";
   name: string;
+  /** Library storage key (attributeKey / entryKey for the item's class or slot). */
+  key?: string;
   value?: number;
   current?: number;
 }
@@ -210,13 +212,14 @@ export function judge(item: ScannedItem, profile: Profile): Verdict {
   if (!isExotic && group) {
     for (const r of resolved) {
       if (!r.def || !libraryCategory(r.def.category, item.kind) || r.perfect) continue;
-      const current = profile.libraryAttributes[entryKey(group, r.def.name)] ?? 0;
+      const key = attributeKey(group, r.def);
+      const current = profile.libraryAttributes[key] ?? 0;
       if (r.value > current) {
-        libraryGains.push({ kind: "attribute", name: r.def.name, value: r.value, current });
+        libraryGains.push({ kind: "attribute", name: r.def.name, value: r.value, current, key });
       }
     }
     if (talentDef && !hasTalent(profile, group, talentDef)) {
-      libraryGains.push({ kind: "talent", name: talentDef.name });
+      libraryGains.push({ kind: "talent", name: talentDef.name, key: entryKey(group, talentDef.name) });
     }
   }
 
