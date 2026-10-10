@@ -59,4 +59,11 @@ describe("library groups", () => {
     expect(coreChd).toMatchObject({ key: "weapon:Rifle:core:Critical Hit Damage", max: 17 });
     expect(attrChd).toMatchObject({ key: "weapon:Rifle:Critical Hit Damage", max: 10 });
   });
+
+  it("lists Damage to Armor only once for shotguns, as a core attribute", () => {
+    const names = librarySections(groupById("shotguns")!).flatMap((s) => (s.kind === "attributes" ? s.attributes.map((a) => a.name) : []));
+    expect(names.filter((n) => n === "Damage to Armor")).toHaveLength(1);
+    const attrs = librarySections(groupById("shotguns")!).find((s) => s.id === "attributes");
+    expect(attrs?.kind === "attributes" && attrs.attributes.map((a) => a.name)).not.toContain("Damage to Armor");
+  });
 });

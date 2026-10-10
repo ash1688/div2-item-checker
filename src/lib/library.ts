@@ -123,11 +123,10 @@ export type LibrarySection =
   | { id: string; title: string; kind: "talents"; talents: LibraryTalent[] };
 
 function attrs(group: LibraryGroup, ...categories: AttributeCategory[]): LibraryAttribute[] {
-  // Weapon cores only apply to their own class (rifles: Rifle Damage + Critical Hit Damage).
+  // Weapon stats only list what that class can roll: its own cores (rifles: Rifle Damage +
+  // Critical Hit Damage) and the attributes it can roll (shotguns: no Damage to Armor attribute).
   return ATTRIBUTES.filter(
-    (a) =>
-      categories.includes(a.category) &&
-      (!WEAPON_CORE.includes(a.category) || a.appliesTo.includes(group.weaponClass ?? "")),
+    (a) => categories.includes(a.category) && (group.kind === "gear" || a.appliesTo.includes(group.weaponClass!)),
   ).map((a) => ({
     key: attributeKey(group, a),
     name: a.name,
