@@ -36,8 +36,9 @@ Upload screenshots of Division 2 items (taken on PS5, synced to phone via the Pl
 - Phone photos need deskew/perspective fix, tint and moiré cleanup; not supported for automatic reading.
 
 ## User profile (editable forms)
-- **Recalibration library:** current max value per attribute and talent.
+- **Recalibration library:** kept per weapon class (7) and gear slot (6), as in game. Best value per attribute and unlocked talents for each; weapons only list talents their class can roll, Body Armor has chest talents, Backpacks backpack talents. Overview tiles like the in-game Library screen, with Max all / Max everything / per-field Max. Verdicts compare an item with its own class/slot library.
 - **Exotics owned:** which exotics the user already has one of.
+- **Kept items:** the copy of each item being kept, with its stats. A new copy is only Keep if its average roll (each stat as a share of its max) beats the kept one; then the old one is junked.
 - **Expertise:** Proficiency Rank (0–10) per item *type* (weapon model, brand, gear set, named, exotic). Rank 10 = Proficient = maxed. Also the account-wide Expertise Level (cap 30).
 
 ## Verdict order (first match wins)
