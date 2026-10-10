@@ -141,9 +141,10 @@ export function proficiencyType(item: ScannedItem): string {
 }
 
 function lookupRank(profile: Profile, type: string): number | undefined {
-  const target = normalizeName(type);
+  // Letters and digits both count: "SOCOM Mk16" and "Military Mk17" are different types.
+  const target = keptKey(type);
   for (const [name, rank] of Object.entries(profile.proficiency)) {
-    if (normalizeName(name) === target) return rank;
+    if (keptKey(name) === target) return rank;
   }
   return undefined;
 }

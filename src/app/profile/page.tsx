@@ -1,13 +1,10 @@
 import Link from "next/link";
-import { getExpertiseLevel, getKeptItems, getProfile } from "@/lib/profile";
+import { getKeptItems, getProfile } from "@/lib/profile";
 import { rollQuality } from "@/lib/verdict";
 import {
   deleteExotic,
   deleteKeptItem,
-  deleteProficiency,
   saveExotic,
-  saveExpertise,
-  saveProficiency,
 } from "./actions";
 import { LibraryOverview } from "./LibraryOverview";
 
@@ -26,48 +23,12 @@ function Section({ title, hint, children, open }: { title: string; hint?: string
 export default function ProfilePage() {
   const profile = getProfile();
   const kept = getKeptItems().sort((a, b) => a.item.name.localeCompare(b.item.name));
-  const level = getExpertiseLevel();
-  const proficiency = Object.entries(profile.proficiency).sort(([a], [b]) => a.localeCompare(b));
 
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl font-semibold">Profile</h1>
 
       <LibraryOverview profile={profile} />
-
-      <Section title={`Expertise level: ${level}`} open>
-        <form action={saveExpertise} className="flex gap-2">
-          <input type="number" name="level" min={0} max={30} defaultValue={level} className="w-24" />
-          <button className="btn">Save</button>
-        </form>
-      </Section>
-
-      <Section
-        title="Proficiency"
-        hint="Rank per item type: weapon model, brand, gear set, named item or exotic. Rank 10 = Proficient (maxed). Types not listed count as below 10."
-        open
-      >
-        <ul className="flex flex-col gap-2">
-          {proficiency.map(([type, rank]) => (
-            <li key={type} className="flex items-center gap-2">
-              <form action={saveProficiency} className="flex flex-1 items-center gap-2">
-                <input type="hidden" name="type" value={type} />
-                <span className="flex-1 truncate">{type}</span>
-                <input type="number" name="rank" min={0} max={10} defaultValue={rank} className="w-16" />
-                <button className="btn btn-ghost !px-3 text-sm">Save</button>
-              </form>
-              <form action={deleteProficiency.bind(null, type)}>
-                <button className="px-2 text-muted" aria-label={`Remove ${type}`}>✕</button>
-              </form>
-            </li>
-          ))}
-        </ul>
-        <form action={saveProficiency} className="mt-3 flex gap-2">
-          <input name="type" placeholder="e.g. SOCOM Mk16 or Core Strength" className="flex-1" required />
-          <input type="number" name="rank" min={0} max={10} defaultValue={10} className="w-16" />
-          <button className="btn">Add</button>
-        </form>
-      </Section>
 
       <Section
         title={`Kept items (${kept.length})`}

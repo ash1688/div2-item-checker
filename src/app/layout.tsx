@@ -12,6 +12,7 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 const nav = [
   { href: "/", label: "Scan" },
   { href: "/scans", label: "History" },
+  { href: "/expertise", label: "Expertise" },
   { href: "/profile", label: "Profile" },
 ];
 
